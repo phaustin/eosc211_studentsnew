@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.10.3
+    jupytext_version: 1.11.4
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -26,7 +26,7 @@ kernelspec:
 
 ### Question 1
 
-**Write down the 3 steps in algorithm design mentioned in the text book OR write down some steps you think will be common to problem solving with MATLAB (you might have more than 3 steps):**
+**Write down the 3 steps in algorithm design mentioned in the text book OR write down some steps you think will be common to problem solving with python (you might have more than 3 steps):**
 
 +++
 
