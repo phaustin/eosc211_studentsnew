@@ -69,14 +69,14 @@ BIG PRINCIPLES:
  week | readings | worksheets | lab
  ---  |--- |--- |   --- |
  1| | none | none
- 2| `01-Orientation/01_01-Why-Python.md` <br> `02-Jupyter-Notebooks/02_05-The-Jupyter-Notebook-Interface.md` (optional) <br> all of `04-Data-Types-and-Variables` |  algorithm design, intro to python, built in functions, data types | intro to jupyterlab (not yet created)
+ 2| `01-Orientation/01_01-Why-Python.md` <br> `02-Jupyter-Notebooks/02_05-The-Jupyter-Notebook-Interface.md` (optional) <br> all of `04-Data-Types-and-Variables` | algorithm design, intro to python, built in functions, data types | intro to jupyterlab (not yet created)
  3| `05-NumPy-and-Arrays/05_03-Python-Lists-and-NumPy-Arrays.md` <br> `05-NumPy-and-Arrays/05_04-Array-Creation.md` (optional) <br> `05-NumPy-and-Arrays/05_05-Array-Indexing.md` <br> `05-NumPy-and-Arrays/05_06-Array-Slicing.md` <br> `05_07-Array-Opperations.md` | intro to numpy arrays, built in functions, slicing *ZOP*| matplotlib, scientific figures, [import, input, process, output], array manipulation
- 4| `06_01-What-is-Matplotlib.md` <br>  |  DNE | math, code structuring, plt subplots
- 5| |  logic, `if elif else` | plt.annotate(), f strings, type casting, user input
+ 4| `06_01-What-is-Matplotlib.md` <br> `06-Plotting-with-Matplotlib/06_03-Line-Plots.md` <br> `06-Plotting-with-Matplotlib/06_05-Multi-Line-Plots.md` <br> `06-Plotting-with-Matplotlib/06_11-Plot-Annotations.md` <br> `06-Plotting-with-Matplotlib/06_14-Contour-Plots.md` <br> *all of chapter 6 is a useful resource for this course/future* |  DNE | math, code structuring, plt subplots
+ 5| 8-1 to 8-4 |  logic, `if elif else` | plt.annotate(), f strings, type casting, user input
  5.5  | | Assignment 1
- 6|  | loops | filtering with running mean/median, implemented with loops (slow)
+ 6| 9-0 to 9-2 | loops | filtering with running mean/median, implemented with loops (slow)
  7|  | MIDTERM
- 8|  | functions | re-do lab 6 with functions
+ 8| 7-0 to 7-4, 7-6 and 7-7 (optional) | functions | re-do lab 6 with functions
  9|  | debugging and error types (off by one, fencepost) | go through a "large" functional program, using dictionaries, `*args, **kwargs` 
  10|  | dictionaries and f strings | DNE
  11|  | vectorization and speed | interpolation with scipy
