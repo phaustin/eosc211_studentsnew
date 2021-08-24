@@ -66,22 +66,22 @@ BIG PRINCIPLES:
 
 
 
- week | worksheets | lab
- ---  |--- |   --- |
- 1| none | none
- 2| algorithm design, intro to python, built in functions, data types | intro to jupyterlab (not yet created)
- 3|intro to numpy arrays, built in functions, slicing *ZOP*| matplotlib, scientific figures, [import, input, process, output], array manipulation
- 4| DNE | math, code structuring, plt subplots
- 5| logic, `if elif else` | plt.annotate(), f strings, type casting, user input
- 5.5 | Assignment 1
- 6| loops | filtering with running mean/median, implemented with loops (slow)
- 7| MIDTERM
- 8| functions | re-do lab 6 with functions
- 9| debugging and error types (off by one, fencepost) | go through a "large" functional program, using dictionaries, `*args, **kwargs` 
- 10| dictionaries and f strings | DNE
- 11| vectorization and speed | interpolation with scipy
- 12| vectorization practice, file IO (csv) | DNE
- 13| review, linear algebra | DNE
+ week | readings | worksheets | lab
+ ---  |--- |--- |   --- |
+ 1| | none | none
+ 2| |  algorithm design, intro to python, built in functions, data types | intro to jupyterlab (not yet created)
+ 3| | intro to numpy arrays, built in functions, slicing *ZOP*| matplotlib, scientific figures, [import, input, process, output], array manipulation
+ 4| |  DNE | math, code structuring, plt subplots
+ 5| |  logic, `if elif else` | plt.annotate(), f strings, type casting, user input
+ 5.5  | | Assignment 1
+ 6|  | loops | filtering with running mean/median, implemented with loops (slow)
+ 7|  | MIDTERM
+ 8|  | functions | re-do lab 6 with functions
+ 9|  | debugging and error types (off by one, fencepost) | go through a "large" functional program, using dictionaries, `*args, **kwargs` 
+ 10|  | dictionaries and f strings | DNE
+ 11|  | vectorization and speed | interpolation with scipy
+ 12|  | vectorization practice, file IO (csv) | DNE
+ 13|  | review, linear algebra | DNE
  
 ## things that arent in e211 that should be(?):
 
