@@ -69,9 +69,9 @@ BIG PRINCIPLES:
  week | readings | worksheets | lab
  ---  |--- |--- |   --- |
  1| | none | none
- 2| |  algorithm design, intro to python, built in functions, data types | intro to jupyterlab (not yet created)
- 3| | intro to numpy arrays, built in functions, slicing *ZOP*| matplotlib, scientific figures, [import, input, process, output], array manipulation
- 4| |  DNE | math, code structuring, plt subplots
+ 2| `01-Orientation/01_01-Why-Python.md` <br> `02-Jupyter-Notebooks/02_05-The-Jupyter-Notebook-Interface.md` (optional) <br> all of `04-Data-Types-and-Variables` |  algorithm design, intro to python, built in functions, data types | intro to jupyterlab (not yet created)
+ 3| `05-NumPy-and-Arrays/05_03-Python-Lists-and-NumPy-Arrays.md` <br> `05-NumPy-and-Arrays/05_04-Array-Creation.md` (optional) <br> `05-NumPy-and-Arrays/05_05-Array-Indexing.md` <br> `05-NumPy-and-Arrays/05_06-Array-Slicing.md` <br> `05_07-Array-Opperations.md` | intro to numpy arrays, built in functions, slicing *ZOP*| matplotlib, scientific figures, [import, input, process, output], array manipulation
+ 4| `06_01-What-is-Matplotlib.md` <br>  |  DNE | math, code structuring, plt subplots
  5| |  logic, `if elif else` | plt.annotate(), f strings, type casting, user input
  5.5  | | Assignment 1
  6|  | loops | filtering with running mean/median, implemented with loops (slow)
