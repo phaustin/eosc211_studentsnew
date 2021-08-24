@@ -65,7 +65,6 @@ BIG PRINCIPLES:
 
 
 
-
  week | readings | worksheets | lab
  ---  |--- |--- |   --- |
  1| | none | none
@@ -82,6 +81,7 @@ BIG PRINCIPLES:
  11|  | vectorization and speed | interpolation with scipy
  12|  | vectorization practice, file IO (csv) | DNE
  13|  | review, linear algebra | DNE
+
  
 ## things that arent in e211 that should be(?):
 
