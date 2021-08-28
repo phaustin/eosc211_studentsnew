@@ -8,6 +8,7 @@ parts:
     chapters:
       - file: wk02/worksheet_steps_in_problem_solving.ipynb
       - file: wk02/some_review_plus_built_in_functions_arrays_preview.ipynb
+      - file: wk02/lab_wk2/lab_wk2.md
   - caption: Week 3
     chapters:
       - file: wk03/data_structures.md
