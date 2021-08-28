@@ -8,6 +8,8 @@ services:
     ports:
       - 80:80
       - 443:443
+    environment:
+      - DO_AUTH_TOKEN
     networks:
       - proxy_aug07
     volumes:

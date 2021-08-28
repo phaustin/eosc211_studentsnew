@@ -6,11 +6,8 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-<<<<<<< Updated upstream
       jupytext_version: 1.11.2
-=======
       jupytext_version: 1.10.3
->>>>>>> Stashed changes
   kernelspec:
     display_name: Python 3 (ipykernel)
     language: python

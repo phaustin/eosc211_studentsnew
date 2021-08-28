@@ -56,8 +56,19 @@ storage = "/etc/traefik/acme.json"
 caServer = "https://acme-v02.api.letsencrypt.org/directory"
 entryPoint = "https"
 OnHostRule = true
-  [acme.httpChallenge]
-  entryPoint = "http"
+
+[[acme.domains]]
+  main = "*.phaustin.org"
+  sans = ["phaustin.org"]
+
+
+[acme.dnsChallenge]
+  provider = "digitalocean"
+  delayBeforeCheck = 0
+  # [acme.httpChallenge]
+  # entryPoint = "http"
+
+
 
 [file]
   directory = "/etc/traefik"

@@ -1,7 +1,26 @@
 version: '3'
 
 services:
-# ...   
+  web:
+    image: httpd:2.4-alpine
+    container_name: web
+    volumes:
+      - ${PWD}/_build/html:/usr/local/apache2/htdocs:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    labels:
+      - "traefik.enable=false"
+    restart: on-failure
+    networks:
+      - proxy_aug07
+
+  e211book:
+    image: phaustin/e211book:aug25
+    build:
+      context: e211book_image
+    container_name: e211book_aug25
+    labels:
+      - "traefik.enable=false"
+
   box1:     
     image: containous/whoami
     container_name: box1
@@ -13,31 +32,7 @@ services:
     restart: on-failure
     networks:
       - proxy_aug07
-
-  box2:     
-    image: containous/whoami
-    container_name: box2
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    labels:
-      - "traefik.enable=false"
-    command: --port 9088
-    restart: on-failure
-    networks:
-      - proxy_aug07
-
-  web:
-    image: httpd:2.4-alpine
-    container_name: web
-    volumes:
-      - ./_build/html:/usr/local/apache2/htdocs:ro
-      - /var/run/docker.sock:/var/run/docker.sock
-    labels:
-      - "traefik.enable=false"
-    restart: on-failure
-    networks:
-      - proxy_aug07
-
+      
       
 networks:
     proxy_aug07:
