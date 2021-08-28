@@ -1,2 +1,4 @@
 *_build*
 acme.json
+*pyc
+*.pyc

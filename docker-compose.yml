@@ -21,14 +21,37 @@ services:
     labels:
       - "traefik.enable=false"
 
-  box1:     
-    image: containous/whoami
-    container_name: box1
+  newbook:
+    image: phaustin/newbook:aug25
+    build:
+      context: newbook_image
+    container_name: newbook_aug25
+    labels:
+      - "traefik.enable=false"
+
+      
+  # box1:     
+  #   image: containous/whoami
+  #   container_name: box1
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #   labels:
+  #     - "traefik.enable=false"
+  #   command: --port 9077
+  #   restart: on-failure
+  #   networks:
+  #     - proxy_aug07
+
+  jupyterhub:
+    build: hub_image
+    image: phaustin/e211hub_img:aug27
+    container_name: e211hub
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     labels:
-      - "traefik.enable=false"
-    command: --port 9077
+      - "traefik.enable=true"
+      - "traefik.frontend.rule=Host:hub.phaustin.org"
+      - "traefik.port=8000"
     restart: on-failure
     networks:
       - proxy_aug07
