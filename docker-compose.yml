@@ -20,15 +20,6 @@ services:
     container_name: e211book_aug25
     labels:
       - "traefik.enable=false"
-
-  newbook:
-    image: phaustin/newbook:aug25
-    build:
-      context: newbook_image
-    container_name: newbook_aug25
-    labels:
-      - "traefik.enable=false"
-
       
   # box1:     
   #   image: containous/whoami

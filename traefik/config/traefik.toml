@@ -23,7 +23,7 @@ entryPoint = "https"
 address = ":443"
 [entryPoints.https.auth]
 [entryPoints.https.auth.basic]
-users = ["phil:$apr1$T1qLNvVo$jVm15GW/mDPSa/nzxCil/1"]
+users = ["e211:$2y$05$2N25nFVO13/Xxv4JUetyou5eo2xnrZ5rUHXJF0/P59gwZUGgZUdrC"]
 [entryPoints.https.tls]
 
 
@@ -32,9 +32,7 @@ users = ["phil:$apr1$T1qLNvVo$jVm15GW/mDPSa/nzxCil/1"]
 address = ":8080"
 [entryPoints.web.auth]
 [entryPoints.web.auth.basic]
-users = ["phil:$apr1$T1qLNvVo$jVm15GW/mDPSa/nzxCil/1"]
-
-
+users = ["e211:$2y$05$2N25nFVO13/Xxv4JUetyou5eo2xnrZ5rUHXJF0/P59gwZUGgZUdrC"]
 
 
 #Enable retry sending a request if the network error                                                                                                                                                  

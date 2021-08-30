@@ -8,6 +8,9 @@
     [backends.backend3]
       [backends.backend3.servers.server1]
       url = "http://web:80"
+    [backends.backend4]
+      [backends.backend4.servers.server1]
+      url = "http://kazarinoff_web:80"
 
   [frontends]
     [frontends.frontend1]
@@ -24,4 +27,8 @@
       backend = "backend3"
       [frontends.frontend3.routes.test_1]
       rule = "Host: web.phaustin.org"
+    [frontends.frontend4]
+      backend = "backend4"
+      [frontends.frontend4.routes.test_1]
+      rule = "Host: e211text.phaustin.org"
   
