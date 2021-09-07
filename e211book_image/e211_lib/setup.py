@@ -1,12 +1,14 @@
-# https://setuptools.readthedocs.io/en/latest/userguide/quickstart.html
-from setuptools import setup
+#!/usr/bin/env python
+# https://docs.python.org/3/distutils/setupscript.html
+# https://github.com/pypa/sampleproject/blob/main/setup.py
+from setuptools import setup, find_packages
 
 setup(
-    name='e211utils',
-    packages=['e211_lib'],
-    version='0.0.1',
+    name='e211_lib',
+    package_dir={'': 'src'},
+    packages=find_packages(where='src'),
     classifiers=[
         'License :: OSI Approved :: BSD License'
     ],
-    keywords='ocese tlef',
-    long_description="""utilities for eosc211""")
+    keywords='eoas ubc ocese',
+    long_description="""e211 libraries""")

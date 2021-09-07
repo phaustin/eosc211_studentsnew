@@ -11,6 +11,9 @@
     [backends.backend4]
       [backends.backend4.servers.server1]
       url = "http://kazarinoff_web:80"
+    [backends.backend5]
+      [backends.backend5.servers.server1]
+      url = "http://quiz_web:80"
 
   [frontends]
     [frontends.frontend1]
@@ -31,4 +34,8 @@
       backend = "backend4"
       [frontends.frontend4.routes.test_1]
       rule = "Host: e211text.phaustin.org"
+    [frontends.frontend5]
+      backend = "backend5"
+      [frontends.frontend5.routes.test_1]
+      rule = "Host: phaustin.org; PathPrefixStrip:/quiz_web"
   

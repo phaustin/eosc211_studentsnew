@@ -7,6 +7,7 @@ dependencies:
   - git
   - python=3.8
   - pip
+  - pillow
   - ghp-import
   - jupytext
   - jupyter-book
@@ -18,4 +19,4 @@ dependencies:
   - matplotlib
   - numpy
   - pandas
-# conda-lock --file environment.yml -p win-64
+# conda-lock --file environment.yml -p linux-64
