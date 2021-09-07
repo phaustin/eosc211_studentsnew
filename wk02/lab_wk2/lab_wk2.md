@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.10.3
+    jupytext_version: 1.11.4
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -66,7 +66,7 @@ Try it yourself! Edit the cell below, replacing the comment (lines of code begin
 print("Hello World")
 ```
 
-and press `[Ctrl]` + `[Enter]` to execute the code. 
+and press `[Ctrl]` + `[Enter]` to execute the code.
 
 ```{code-cell} ipython3
 # your code here
@@ -103,9 +103,9 @@ planet = "Earth"
 This tells the python interpreter: *Find some space in computer memory, store the letters which form the word "Earth" there, and reference that word with a variable called **planet** (Note: this happens without outputting anything to the screen).* Throughout the rest of your code, referencing the variable "planet" will result in the word "Earth". If you change the variable to "Betelgeuse", every reference to that variable will now produce "Betelgeuse". Clever use of variables can save you time hunting through your code and replacing every instance of a word/number/value.
 
 ```{code-cell} ipython3
-print("Welcome to " + planet)
-print("Nice weather today here on " + planet)
-print(planet + " will shortly be destroyed to make space for the new interstellar Vogon highway.")
+print(f"Welcome to {planet}")
+print(f"Nice weather today here on {planet}")
+print(f"{planet}  will shortly be destroyed to make space for the new interstellar Vogon highway.")
 ```
 
 #### Cell Execution Order and Restarting the Kernel
@@ -115,7 +115,7 @@ Within a cell, lines of code are executed in the order they are written. Code ce
 * cell 1, cell 2, cell 3
 * cell 3, cell 2, cell 1
 
-Which value for `my_field` gets printed to the screen in either case? 
+Which value for `my_field` gets printed to the screen in either case?
 
 ```{code-cell} ipython3
 # cell 1
@@ -254,7 +254,7 @@ biking_speed = 20  # km/h
 
 # your code here
 
-print("It will take " + t + " hours to ride a bicycle around " + planet)
+print(f"It will take {t} hours to ride a bicycle around {planet}")
 ```
 
 ## Helpful Terminology
