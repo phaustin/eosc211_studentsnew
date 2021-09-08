@@ -1,14 +1,15 @@
 format: jb-book
 root: announcements.md
 parts:
-  - caption: Week 1
+  - caption: Week 1 - Introduction
     chapters:
       - file: syllabus/syllabus.md
       - file: syllabus/covid_statements.md
       - file: syllabus/schedule_F2021.md
+      - file: syllabus/worksheet_steps_in_problem_solving.md
   - caption: Week 2
     chapters:
-      - file: wk02/worksheet_steps_in_problem_solving.ipynb
+      - file: wk02/data_types.md
       - file: wk02/some_review_plus_built_in_functions_arrays_preview.ipynb
       - file: wk02/lab_wk2/lab_wk2.md
   - caption: Week 3
