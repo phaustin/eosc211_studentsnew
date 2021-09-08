@@ -20,7 +20,7 @@ kernelspec:
 
 **Learning Objective:** Practice the steps in problem solving using earthquake data.
 
-<img src=".\quakemap.png" width="500">
+<img src="quakemap.png" width="500">
 
 +++
 

@@ -10,7 +10,7 @@ parts:
   - caption: Week 2
     chapters:
       - file: wk02/data_types.md
-      - file: wk02/some_review_plus_built_in_functions_arrays_preview.ipynb
+      - file: wk02/some_review_plus_built_in_functions_arrays_preview.md
       - file: wk02/lab_wk2/lab_wk2.md
   - caption: Week 3
     chapters:
