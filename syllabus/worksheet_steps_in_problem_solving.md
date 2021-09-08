@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.4
+    jupytext_version: 1.10.3
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -20,7 +20,7 @@ kernelspec:
 
 **Learning Objective:** Practice the steps in problem solving using earthquake data.
 
-<img src=".\quakemap.png" width="500">
+<img src="quakemap.png" width="500">
 
 +++
 

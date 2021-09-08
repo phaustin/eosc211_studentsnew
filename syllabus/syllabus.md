@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.4
+    jupytext_version: 1.10.3
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -84,7 +84,7 @@ Mathematical computer-based problem solving in Earth and planetary sciences.
 - Clear and precise thinking
 - DRY and YANGNI
 - Make it look good
-- Keep your hard drive organized just like you would a lab bench 
+- Keep your hard drive organized just like you would a lab bench
 
 +++
 
@@ -129,7 +129,6 @@ The exams are 2-part exams.  Part 1 will be done individually. Then you will han
 
 Quizzes will typically be done in the Tues class and will be based on the pre-readings.  They will be short, open book to test your retention of the material. If you have completed the readings, these should be easy.
 
-
 +++
 
 ## Academic Integrity: Policies for this Course
@@ -140,7 +139,7 @@ In class, we will randomly assign you to small groups (~4 people/group) each cla
 
 For labs and assignments, we encourage collaboration using a pair-programming method. However, you are expected to TRUTHFULLY REPORT: (a) the name of your partner(s), and (b) the level of collaboration. Using someone else’s code and claiming it as your own is plagiarism and will be treated as such.
 
-The use of python, googling solutions, or receiving a solution from someone else are FORBIDDEN in the quizzes, mid-term and final exam. 
+The use of python, googling solutions, or receiving a solution from someone else are FORBIDDEN in the quizzes, mid-term and final exam.
 
 +++
 
