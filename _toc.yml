@@ -3,7 +3,9 @@ root: announcements.md
 parts:
   - caption: Week 1
     chapters:
-      - file: syllabus/course_goals.md
+      - file: syllabus/syllabus.md
+      - file: syllabus/covid_statements.md
+      - file: syllabus/schedule_F2021.md
   - caption: Week 2
     chapters:
       - file: wk02/worksheet_steps_in_problem_solving.ipynb
