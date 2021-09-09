@@ -2,3 +2,5 @@
 acme.json
 *pyc
 *.pyc
+*.ipynb
+*_soln*
