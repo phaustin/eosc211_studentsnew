@@ -1,6 +1,0 @@
-# pyproject.toml
-[build-system]
-requires = ["setuptools>=45", "wheel"]
-
-
-
