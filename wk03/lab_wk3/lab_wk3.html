@@ -1,0 +1,1592 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Week 3 &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Making Plots" href="../../wk04/making_plots.html" />
+    <link rel="prev" title="Data Structures II" href="../data_structures_ii.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../announcements.html">
+   Course Home/Announcements
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 1 - Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus/syllabus.html">
+   Course Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus/covid_statements.html">
+   Covid Safety in the Classroom
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus/schedule_F2021.html">
+   Course Schedule - Fall Semester 2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus/worksheet_steps_in_problem_solving.html">
+   Steps In Problem Solving
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 2 - Data Types
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk02/data_types.html">
+   Data Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk02/some_review_plus_built_in_functions_arrays_preview.html">
+   Some Review Plus Built-In Functions, Arrays Preview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk02/lab_wk2/lab_wk2.html">
+   Lab Week 2 - Jupyterhub Tutorial
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 3 - Data Structures
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_structures.html">
+   Data Structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_structures_ii.html">
+   Data Structures II
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lab Week 3
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 4 - Scientific Figures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk04/making_plots.html">
+   Making Plots
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk04/lab_wk4/lab_wk4.html">
+   Lab Week 4
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 5 - Computer Logic
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk05/logic.html">
+   Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk05/complicated_logic.html">
+   More Complicated Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk05/lab_wk5/lab_wk5.html">
+   Lab Week 5
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Assignment 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../assignment01/ast1.html">
+   Assignment 1
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 6 - Loops
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk06/loops.html">
+   Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk06/loops_ii.html">
+   Loops II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk06/lab_wk6/lab_wk6.html">
+   Lab Week 6
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 8 - Functions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk08/functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk08/functions_ii.html">
+   Functions II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk08/lab_wk8/lab_wk8.html">
+   Lab Week 8
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 9 - Debugging
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk09/debugging.html">
+   Debugging
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk09/debugging_2.html">
+   Debugging II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk09/lab_wk9/lab_wk9.html">
+   Lab Week 9
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 10 - Developing Workflows
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk10/dictionaries_and_f_strings.html">
+   Dictionaries, F String Literals
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 11 - Vectorization and Speed
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk11/lab_wk11/lab_wk11.html">
+   Lab Week 11
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 12
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk12/file_io_practice.html">
+   Practice with loops, if, strings,  file IO, logical indexing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk12/exercises.html">
+   Exercises
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../../_sources/wk03/lab_wk3/lab_wk3.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/wk03/lab_wk3/lab_wk3.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live?urlpath=tree/wk03/lab_wk3/lab_wk3.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://hub.phaustin.org/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk03/lab_wk3/lab_wk3.md&branch=e211_live"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eosc-211">
+   EOSC 211
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#learning-objectives">
+     Learning Objectives:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intro">
+     Intro
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#section-1-plot-west-coast-bathymetry-data">
+   Section 1: Plot West Coast Bathymetry Data
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-packages">
+     1) Import Packages
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#import-raw-data">
+     2) Import Raw Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#process-the-data">
+     Process The Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#display-the-results">
+     Display the Results
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#section-2-mapping-chlorophyl-in-the-ocean">
+   Section 2: Mapping Chlorophyl in the Ocean
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#to-be-handed-in">
+     To be handed in:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lab-solution">
+   Lab Solution:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#downarrow-downarrow-downarrow-extra-code-scraps-made-while-writing-this-lab-downarrow-downarrow-downarrow">
+   <span class="math notranslate nohighlight">
+    \(\downarrow\)
+   </span>
+   <span class="math notranslate nohighlight">
+    \(\downarrow\)
+   </span>
+   <span class="math notranslate nohighlight">
+    \(\downarrow\)
+   </span>
+   Extra Code Scraps Made While Writing this lab
+   <span class="math notranslate nohighlight">
+    \(\downarrow\)
+   </span>
+   <span class="math notranslate nohighlight">
+    \(\downarrow\)
+   </span>
+   <span class="math notranslate nohighlight">
+    \(\downarrow\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1-visualize-some-oceanographic-data-from-the-web">
+   Exercise 1: Visualize some oceanographic data from the web
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-2-bathymetry">
+   Exercise 2: Bathymetry
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-3">
+   Exercise 3:
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="lab-week-3">
+<h1>Lab Week 3<a class="headerlink" href="#lab-week-3" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="eosc-211">
+<h2>EOSC 211<a class="headerlink" href="#eosc-211" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="learning-objectives">
+<h3>Learning Objectives:<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Take a real world problem in EOAS and think of it like a scientific programmer</p></li>
+<li><p>Apply our knowledge of <em>Python</em> data types, indexing, slicing arrays</p></li>
+<li><p>Use built in functions and imported packages</p></li>
+<li><p>Generate a scientific figure with Matplotlib</p></li>
+<li><p>Reverse-engineer someone else’s code to make it work for you</p></li>
+</ol>
+</div>
+<div class="section" id="intro">
+<h3>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h3>
+<p>In this lab we will apply our knowledge of <em>numpy arrays</em> to work with some real oceanographic data, as well as  generate a <em>scientific figure</em> using Python’s <em>Matplotlib</em> library. Presenting your data with clear, concise, visually appealing figures is an exercise we will continually re-visit in this course, and will prove to be a useful skill throughout your career in EOAS. Below is a handy guide for creating excellent figures (also in the marking rubric for this and future labs)</p>
+<div class="alert alert-block alert-info">
+<b>Scientific Figure Checklist:</b> 
+<ul class="simple">
+<li><p>[ ] Title (Short and sweet is best)</p></li>
+<li><p>[ ] Axes labels with units (Don’t forget the units!)</p></li>
+<li><p>[ ] Legend (Or anything that helps interpret the information presented)</p></li>
+<li><p>[ ] Does the figure <em>make sense</em> just by looking at it? The data should be clear without referencing anything outside the figure</p></li>
+<li><p>[ ] Does it <em>look good</em>? (Do the colors clash? does it look crowded/messy?)</p></li>
+</ul>
+</div>
+<p>This lab is comprised of two sections: <strong>1)</strong> a tutorial for processing data with Python, Jupyter Notebooks, and creating a scientific figure with Matplotlib, and <strong>2)</strong> a set of instructions for creating your own figure which you will hand in. It is highly recommended that you work through the tutorial <strong>before</strong> attempting the assignment, as it covers a few concepts we have not specifically addressed in lecture yet, and which are essential for earning full marks on the lab assignment.</p>
+</div>
+</div>
+<div class="section" id="section-1-plot-west-coast-bathymetry-data">
+<h2>Section 1: Plot West Coast Bathymetry Data<a class="headerlink" href="#section-1-plot-west-coast-bathymetry-data" title="Permalink to this headline">¶</a></h2>
+<p>In this tutorial, we will import a dataset as a <em>numpy</em> array and plot it using <em>matplotlib.</em> To keep things neat and organized, we will break the process down into the following steps:</p>
+<ol class="simple">
+<li><p>Import required packages</p></li>
+<li><p>Import raw data</p></li>
+<li><p>Process the data</p></li>
+<li><p>Display our results</p></li>
+</ol>
+<div class="section" id="import-packages">
+<h3>1) Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">¶</a></h3>
+<p>It’s good practice to import all the packages you’ll need (on top of Python’s core <em>built-in functions</em>) in a cell near the top of your notebook. So far we know we will be dealing with <em>numpy arrays</em> and making plots, so lets import Numpy and Matplotlib. There are a few different syntaxes for importing packages, demonstrated below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span> <span class="c1"># get all the packages from the e211 library (developed specifically for this course)</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># get all the packages associated with numpy, and assign numpy a nickname &#39;np&#39;</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># get just the package called &#39;pyplot&#39; from the matplotlib library, nicknamed &#39;plt&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>These are all the dependencies we will need to complete this lab. If we decide later that we want to use something else, we can always add to this cell and re-run it.</p>
+</div>
+<div class="section" id="import-raw-data">
+<h3>2) Import Raw Data<a class="headerlink" href="#import-raw-data" title="Permalink to this headline">¶</a></h3>
+<p>The data we wish to analyze is stored in memory at <code class="docutils literal notranslate"><span class="pre">path/to/data/in/container/Bathyfile.mat</span></code>. <em>Bathymetry</em> refers to information about the depth of the ocean and the height of landmasses. We can use this path (just like in last week’s tutorial) to access the data. The next thing to notice is that the file ends with <code class="docutils literal notranslate"><span class="pre">.mat</span></code>, which is the file extension used with data generated in MATLAB. We will need a extra package to read this type of file into something we can analyze with a Jupyter Notebook. Lucky for us, there is something exactly like this in the <strong>e211</strong> library; a function which reads <code class="docutils literal notranslate"><span class="pre">.mat</span></code> files and turns them into numpy arrays!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">raw_bathdata</span> <span class="o">=</span> <span class="n">e211</span><span class="o">.</span><span class="n">load_mat</span><span class="p">(</span><span class="s2">&quot;Bathyfile.mat&quot;</span><span class="p">)</span>
+
+<span class="c1"># what is the data type of the new variable we just created?</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">raw_bathdata</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy.ndarray
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that we have the data in a format we can use, let’s explore! We can use built in functions to find out more things than just the data type:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">raw_bathdata</span><span class="p">)</span> <span class="c1"># how big is the array?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(391, 1201)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">raw_bathdata</span><span class="p">)</span> <span class="c1"># what is the deepest point? (units are in m above/below sea level)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-5243
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let’s make a “quick and dirty” plot as a preliminary way to visualize our data (especially since we changed the format, it is a good idea to check if anything went awry). This is just a quick check, we will worry about making it into a proper scientific figure later on. Since this is a 2D dataset (look at the cell where we found <em>np.shape</em> of the data), we can use the <code class="docutils literal notranslate"><span class="pre">contourf()</span></code> function from matplotlib.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">raw_bathdata</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/lab_wk3_9_0.png" src="../../_images/lab_wk3_9_0.png" />
+</div>
+</div>
+<p>We have successfully imported the .mat data as an array, but something is clearly wrong. This is supposed to be geographical information of BC and the Pacific Ocean. Can you recognize Vancouver Island? the Gulf of Alaska? The Rocky Mountains? What has happened here and how might we fix it?</p>
+</div>
+<div class="section" id="process-the-data">
+<h3>Process The Data<a class="headerlink" href="#process-the-data" title="Permalink to this headline">¶</a></h3>
+<p>This step is also commonly referred to as “data scrubbing,” and is often the longest step (about 80% of our time, according to <a class="reference external" href="https://www.datascienceatthecommandline.com/1e/chapter-1-introduction.html">a source</a>) while working with a dataset. At this stage we can change the format, get rid of erroneous or extraneous data, combine/compare datasets, add labels to things, but it is important not to <em>alter</em> our data in a way that will compromise its <em>integrity</em>, which might lead us to make false conclusions from our information.</p>
+<p>First we need to flip our array over. We can do this using our knowledge of array slicing! Remember, the syntax for accessing elements in an array is <code class="docutils literal notranslate"><span class="pre">[start:stop:step]</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bathdata_fixed</span> <span class="o">=</span> <span class="n">raw_bathdata</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="c1"># flip the array over and assign it to a new variable</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">bathdata_fixed</span><span class="p">);</span> <span class="c1"># try another quick visualization</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/lab_wk3_11_0.png" src="../../_images/lab_wk3_11_0.png" />
+</div>
+</div>
+<p>Much better! Now let’s think about generating a way to label our X and Y axes with something meaningful. Currently, the labels refer to the <em>array index</em> of each point on our plot. A far more useful reference would be the latitude (on the y axis) and longitude (on the x axis). This particular image is from latitude 47<span class="math notranslate nohighlight">\(^o\)</span> to 60<span class="math notranslate nohighlight">\(^o\)</span> N and longitude -150<span class="math notranslate nohighlight">\(^o\)</span> to -110 <span class="math notranslate nohighlight">\(^o\)</span>E. The following code generates arrays that with the lat and lon of each row and column in the image, then passes those into the <code class="docutils literal notranslate"><span class="pre">contourf</span></code> function, which then creates the plot with the new labels applied. Take a second to understand what is happening at each line of code. You may want to try running in a cell <code class="docutils literal notranslate"><span class="pre">help()</span></code> with the name of a built-in function for more information on how that function works.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">latlen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">bathdata_fixed</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># assign the height and width of the image to new variables</span>
+<span class="n">lonlen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">bathdata_fixed</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="n">lats</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="n">latlen</span><span class="p">)</span> <span class="c1"># create arrays for lat and lon</span>
+<span class="n">lons</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">150</span><span class="p">,</span> <span class="o">-</span><span class="mi">110</span><span class="p">,</span> <span class="n">lonlen</span><span class="p">)</span>
+
+<span class="c1"># plot it again!</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">lons</span><span class="p">,</span> <span class="n">lats</span><span class="p">,</span> <span class="n">bathdata_fixed</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/lab_wk3_13_0.png" src="../../_images/lab_wk3_13_0.png" />
+</div>
+</div>
+<p>Maybe we are only interested in the bathymetry near Vancouver Island. We can “zoom” in on a particular area, using slicing to select a section of the original array. <strong>IMPORTANT:</strong> We need to slice the <code class="docutils literal notranslate"><span class="pre">lats</span></code> and <code class="docutils literal notranslate"><span class="pre">lons</span></code> arrays at the same intervals <em>before</em> we try to re-create the plot, or else we will get an error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bath_zoomed</span> <span class="o">=</span> <span class="n">bathdata_fixed</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">150</span><span class="p">,</span><span class="mi">500</span><span class="p">:</span><span class="mi">900</span><span class="p">]</span>
+<span class="n">lats_zoomed</span> <span class="o">=</span> <span class="n">lats</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">150</span><span class="p">]</span>
+<span class="n">lons_zoomed</span> <span class="o">=</span> <span class="n">lons</span><span class="p">[</span><span class="mi">500</span><span class="p">:</span><span class="mi">900</span><span class="p">]</span> <span class="c1"># make sure the slices match between the coordinates and the original data</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">lons_zoomed</span><span class="p">,</span> <span class="n">lats_zoomed</span><span class="p">,</span> <span class="n">bath_zoomed</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/lab_wk3_15_0.png" src="../../_images/lab_wk3_15_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="display-the-results">
+<h3>Display the Results<a class="headerlink" href="#display-the-results" title="Permalink to this headline">¶</a></h3>
+<p>If we ara satisfied with our data processing, it is now time to present our result with a scientific figure. Go through the checklist and add code to our plot until we tick all of the boxes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">con</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">lons_zoomed</span><span class="p">,</span> <span class="n">lats_zoomed</span><span class="p">,</span> <span class="n">bath_zoomed</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Blues_r&quot;</span><span class="p">)</span> <span class="c1"># change the colormap to something suitable</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Bathymetry Near Vancouver Island&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;longitude (deg)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;latitude (deg)&quot;</span><span class="p">)</span>
+
+<span class="c1"># create a colorbar with labels to show the numerical values corresponding to each color</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">con</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Height Above/Below Sea Level (m)&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/lab_wk3_17_0.png" src="../../_images/lab_wk3_17_0.png" />
+</div>
+</div>
+<p>Go through our checklist:</p>
+<ul class="simple">
+<li><p>[x] Title</p></li>
+<li><p>[x] Axes labels with units</p></li>
+<li><p>[x] Legend - yes, the colorbar is similar to a legend, and we included units!</p></li>
+<li><p>[x] Does the figure <em>make sense</em> just by looking at it? - look at the colormap we chose: dark blue for deep ocean and white for snowy mountains. This makes the figure <em>visually intuitive</em></p></li>
+<li><p>[x] Does it <em>look good</em>?</p></li>
+</ul>
+<p>For changing the colormap, check out the <a class="reference external" href="https://matplotlib.org/stable/gallery/color/colormap_reference.html">Matplotlib Documentation</a> for a list to choose from. Try inserting the names of other colormaps in place of “Blues_r” and see what happens. Note you can add “_r” to the end of any of cmap name to reverse it.</p>
+<p>Finally, as a last step, restart the kernel and re-run the whole notebook to check for errors (click the <span class="math notranslate nohighlight">\(\blacktriangleright\blacktriangleright\)</span> button on the toolbar). This is important, so that the next time you run your notebook (or someone else, perhaps the person marking it), you know you will get the same result that you have now.</p>
+</div>
+</div>
+<div class="section" id="section-2-mapping-chlorophyl-in-the-ocean">
+<h2>Section 2: Mapping Chlorophyl in the Ocean<a class="headerlink" href="#section-2-mapping-chlorophyl-in-the-ocean" title="Permalink to this headline">¶</a></h2>
+<p>In the <code class="docutils literal notranslate"><span class="pre">/lab_week3</span></code> folder, there is a dataset called <code class="docutils literal notranslate"><span class="pre">chlorophyl_apr2021.png</span></code>, which shows the concentration of chlorphyl (mg/m<span class="math notranslate nohighlight">\(^3\)</span>) in the ocean from satellite imagery, averaged over the month of April in 2021. The data originally came from
+NASA’s Earth Observing System Data and Information System (EOSDIS), which can be found at <a class="reference external" href="https://oceancolor.gsfc.nasa.gov/">this website</a>.
+Your task is to go through much the sama analysis as we did in the tutorial: import data into a Jupyter Notebook, scrub it, and use it to generate a scientific figure.</p>
+<div class="section" id="to-be-handed-in">
+<h3>To be handed in:<a class="headerlink" href="#to-be-handed-in" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Create a notebook called <code class="docutils literal notranslate"><span class="pre">lab_week3_firstname_lastname.ipynb</span></code> with your first name and last name. Make sure to comment your code using either <em>markdown cells</em> or <em>in-code comments</em> starting with the # symbol.</p></li>
+<li><p>Import the dataset as a numpy array. In the <code class="docutils literal notranslate"><span class="pre">e211</span></code> library, there is a function called <code class="docutils literal notranslate"><span class="pre">e211.load_oceancolor()</span></code> which will likely prove useful.</p></li>
+<li><p>Scrub your dataset, correcting any errors and adding an appropriate coordinate system. (<strong>Note</strong>: on the whole globe, latitude runs from 90<span class="math notranslate nohighlight">\(^o\)</span> (north pole) to -90 (south pole) with 0<span class="math notranslate nohighlight">\(^o\)</span> at the equator and longitude from -180<span class="math notranslate nohighlight">\(^o\)</span> to 180<span class="math notranslate nohighlight">\(^o\)</span> with the 0<span class="math notranslate nohighlight">\(^o\)</span> meridian passing through Greenwich, UK)</p></li>
+<li><p>Zoom in on some place of interest. Where you go is totally up to you, but try to include a recognizable land feature in your plot.</p></li>
+<li><p>Present your data, making sure to meet all the requirements for a scientific figure. Use a colormap other than the default.</p></li>
+<li><p>Final check: run your whole notebook again and check for errors using the <span class="math notranslate nohighlight">\(\blacktriangleright\blacktriangleright\)</span> button.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="lab-solution">
+<h2>Lab Solution:<a class="headerlink" href="#lab-solution" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">##### import packages ######</span>
+
+<span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">##### import raw data #####</span>
+
+<span class="n">chlor</span> <span class="o">=</span> <span class="n">e211</span><span class="o">.</span><span class="n">load_oceancolor</span><span class="p">(</span><span class="s2">&quot;chlorophyl_apr2021.png&quot;</span><span class="p">)</span>
+<span class="c1">#plt.contourf(chlor)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">##### scrub data #####</span>
+
+<span class="c1"># create arrays to show latitude and longitude as the labels</span>
+<span class="n">num_lats</span> <span class="o">=</span> <span class="n">chlor</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">num_lons</span> <span class="o">=</span> <span class="n">chlor</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">chlor_fixed</span> <span class="o">=</span> <span class="n">chlor</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># flip the array over vertically</span>
+
+<span class="c1"># create the lat array, with the same number of elements as chlor has rows</span>
+<span class="n">lats</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="n">num_lats</span><span class="p">)</span>
+<span class="c1"># create the lon array, with the same number of elements as chlor has cols</span>
+<span class="n">lons</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="n">num_lons</span><span class="p">)</span>  
+
+<span class="c1"># zoom in on PNW by slicing all 3 arrays</span>
+<span class="n">hmin</span> <span class="o">=</span> <span class="mi">2500</span>
+<span class="n">hmax</span> <span class="o">=</span> <span class="mi">3700</span>
+<span class="n">wmin</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">wmax</span> <span class="o">=</span> <span class="mi">2000</span>
+
+<span class="n">chlor_zoomed</span> <span class="o">=</span> <span class="n">chlor_fixed</span><span class="p">[</span><span class="n">hmin</span><span class="p">:</span><span class="n">hmax</span><span class="p">,</span><span class="n">wmin</span><span class="p">:</span><span class="n">wmax</span><span class="p">]</span>
+<span class="n">lats_zoomed</span> <span class="o">=</span> <span class="n">lats</span><span class="p">[</span><span class="n">hmin</span><span class="p">:</span><span class="n">hmax</span><span class="p">]</span>
+<span class="n">lons_zoomed</span> <span class="o">=</span> <span class="n">lons</span><span class="p">[</span><span class="n">wmin</span><span class="p">:</span><span class="n">wmax</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">##### make a scientific figure #####</span>
+
+<span class="n">con</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">lons_zoomed</span><span class="p">,</span> <span class="n">lats_zoomed</span><span class="p">,</span> <span class="n">chlor_zoomed</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;magma&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">con</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Chlorophyl Concentration, OCI Algorithm (mg/m3)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Phytoplankton in the Pacific Ocean&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;longitude (deg)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;latitude (deg)&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/lab_wk3_24_0.png" src="../../_images/lab_wk3_24_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="downarrow-downarrow-downarrow-extra-code-scraps-made-while-writing-this-lab-downarrow-downarrow-downarrow">
+<h2><span class="math notranslate nohighlight">\(\downarrow\)</span><span class="math notranslate nohighlight">\(\downarrow\)</span><span class="math notranslate nohighlight">\(\downarrow\)</span> Extra Code Scraps Made While Writing this lab <span class="math notranslate nohighlight">\(\downarrow\)</span><span class="math notranslate nohighlight">\(\downarrow\)</span><span class="math notranslate nohighlight">\(\downarrow\)</span><a class="headerlink" href="#downarrow-downarrow-downarrow-extra-code-scraps-made-while-writing-this-lab-downarrow-downarrow-downarrow" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="exercise-1-visualize-some-oceanographic-data-from-the-web">
+<h2>Exercise 1: Visualize some oceanographic data from the web<a class="headerlink" href="#exercise-1-visualize-some-oceanographic-data-from-the-web" title="Permalink to this headline">¶</a></h2>
+<p>get data from here <a class="reference external" href="https://oceancolor.gsfc.nasa.gov">https://oceancolor.gsfc.nasa.gov</a></p>
+<p>link -&gt; data -&gt; level 3 browser -&gt; drop down settings to “standard”, “<any>”, <any>”, “monthly”, “9km” -&gt; right click -&gt; save image as -&gt; name it something sensible and save in working directory</p>
+<p>mine is at <code class="docutils literal notranslate"><span class="pre">C:\Users\Owner\UBC_TLEF\eosc_211\e211_python_2021\wk03\lab_wk3\chlorophyl_march1999.png</span></code></p>
+<p>Import the packages we need (explain what each one does)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the necessary libraries</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>import our data as a .png image</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load the image</span>
+<span class="n">chlordat_in</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;chlorophyl_march1999.png&quot;</span><span class="p">)</span>
+
+<span class="c1"># what type of data are we dealing with? use the built in function type()</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">chlordat_in</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PIL.PngImagePlugin.PngImageFile
+</pre></div>
+</div>
+</div>
+</div>
+<p>png is a common image format, but we would like to do more than just look at the picture. Convert to numpy so we can do analyze our data and generate a proper <em>scientific figure</em> to present our results.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chlordat_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">chlordat_in</span><span class="p">)</span>
+
+<span class="c1"># now what is the data type?</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">chlordat_arr</span><span class="p">)</span>
+<span class="n">chlordat_arr</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dtype(&#39;uint8&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cool, we made it into a numpy array. What are its dimensions?</span>
+<span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">chlordat_arr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2160, 4320)
+</pre></div>
+</div>
+</div>
+</div>
+<p>What are the <em>values</em> stored in our array? chlorophyl concentrations from 0 - 20 mg/m3 are mapped to integers from 255 to 0. Discuss further as in the old lab</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pcm</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">chlordat_arr</span><span class="p">,</span><span class="n">origin</span><span class="o">=</span><span class="s1">&#39;upper&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/lab_wk3_35_0.png" src="../../_images/lab_wk3_35_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lets try plotting our array as a pcolormesh (a common way to visualize 2D datasets or images)</span>
+<span class="n">pcm</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">chlordat_arr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/lab_wk3_36_0.png" src="../../_images/lab_wk3_36_0.png" />
+</div>
+</div>
+<p>Okay, we seem to have the general features of our data, but something has gone awry converting from a
+png to an array. How can we fix this given what we know about <em>array slicing?</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">chlordat_fixed</span> <span class="o">=</span> <span class="n">chlordat_arr</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">,::]</span>  <span class="c1"># explain what this does, or get students to come up with this</span>
+
+<span class="c1"># try plotting it again</span>
+<span class="n">pcm</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">chlordat_fixed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/lab_wk3_38_0.png" src="../../_images/lab_wk3_38_0.png" />
+</div>
+</div>
+<p>Looking better, but the default colours hurt to look at and it’s very hard to understand what this picture actually represents. We can look at the available <em>parameters</em> ( ways we can modify the figure) for a <em>pcolormesh</em> plot by doing</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function pcolormesh in module matplotlib.pyplot:
+
+pcolormesh(*args, alpha=None, norm=None, cmap=None, vmin=None, vmax=None, shading=None, antialiased=False, data=None, **kwargs)
+    Create a pseudocolor plot with a non-regular rectangular grid.
+    
+    Call signature::
+    
+        pcolormesh([X, Y,] C, **kwargs)
+    
+    *X* and *Y* can be used to specify the corners of the quadrilaterals.
+    
+    .. hint::
+    
+       `~.Axes.pcolormesh` is similar to `~.Axes.pcolor`. It is much faster
+       and preferred in most cases. For a detailed discussion on the
+       differences see :ref:`Differences between pcolor() and pcolormesh()
+       &lt;differences-pcolor-pcolormesh&gt;`.
+    
+    Parameters
+    ----------
+    C : 2D array-like
+        The color-mapped values.
+    
+    X, Y : array-like, optional
+        The coordinates of the corners of quadrilaterals of a pcolormesh::
+    
+            (X[i+1, j], Y[i+1, j])       (X[i+1, j+1], Y[i+1, j+1])
+                                  +-----+
+                                  |     |
+                                  +-----+
+                (X[i, j], Y[i, j])       (X[i, j+1], Y[i, j+1])
+    
+        Note that the column index corresponds to the x-coordinate, and
+        the row index corresponds to y. For details, see the
+        :ref:`Notes &lt;axes-pcolormesh-grid-orientation&gt;` section below.
+    
+        If ``shading=&#39;flat&#39;`` the dimensions of *X* and *Y* should be one
+        greater than those of *C*, and the quadrilateral is colored due
+        to the value at ``C[i, j]``.  If *X*, *Y* and *C* have equal
+        dimensions, a warning will be raised and the last row and column
+        of *C* will be ignored.
+    
+        If ``shading=&#39;nearest&#39;`` or ``&#39;gouraud&#39;``, the dimensions of *X*
+        and *Y* should be the same as those of *C* (if not, a ValueError
+        will be raised).  For ``&#39;nearest&#39;`` the color ``C[i, j]`` is
+        centered on ``(X[i, j], Y[i, j])``.  For ``&#39;gouraud&#39;``, a smooth
+        interpolation is caried out between the quadrilateral corners.
+    
+        If *X* and/or *Y* are 1-D arrays or column vectors they will be
+        expanded as needed into the appropriate 2D arrays, making a
+        rectangular grid.
+    
+    cmap : str or `~matplotlib.colors.Colormap`, default: :rc:`image.cmap`
+        A Colormap instance or registered colormap name. The colormap
+        maps the *C* values to colors.
+    
+    norm : `~matplotlib.colors.Normalize`, optional
+        The Normalize instance scales the data values to the canonical
+        colormap range [0, 1] for mapping to colors. By default, the data
+        range is mapped to the colorbar range using linear scaling.
+    
+    vmin, vmax : float, default: None
+        The colorbar range. If *None*, suitable min/max values are
+        automatically chosen by the `~.Normalize` instance (defaults to
+        the respective min/max values of *C* in case of the default linear
+        scaling).
+        It is deprecated to use *vmin*/*vmax* when *norm* is given.
+    
+    edgecolors : {&#39;none&#39;, None, &#39;face&#39;, color, color sequence}, optional
+        The color of the edges. Defaults to &#39;none&#39;. Possible values:
+    
+        - &#39;none&#39; or &#39;&#39;: No edge.
+        - *None*: :rc:`patch.edgecolor` will be used. Note that currently
+          :rc:`patch.force_edgecolor` has to be True for this to work.
+        - &#39;face&#39;: Use the adjacent face color.
+        - A color or sequence of colors will set the edge color.
+    
+        The singular form *edgecolor* works as an alias.
+    
+    alpha : float, default: None
+        The alpha blending value, between 0 (transparent) and 1 (opaque).
+    
+    shading : {&#39;flat&#39;, &#39;nearest&#39;, &#39;gouraud&#39;, &#39;auto&#39;}, optional
+        The fill style for the quadrilateral; defaults to
+        &#39;flat&#39; or :rc:`pcolor.shading`. Possible values:
+    
+        - &#39;flat&#39;: A solid color is used for each quad. The color of the
+          quad (i, j), (i+1, j), (i, j+1), (i+1, j+1) is given by
+          ``C[i, j]``. The dimensions of *X* and *Y* should be
+          one greater than those of *C*; if they are the same as *C*,
+          then a deprecation warning is raised, and the last row
+          and column of *C* are dropped.
+        - &#39;nearest&#39;: Each grid point will have a color centered on it,
+          extending halfway between the adjacent grid centers.  The
+          dimensions of *X* and *Y* must be the same as *C*.
+        - &#39;gouraud&#39;: Each quad will be Gouraud shaded: The color of the
+          corners (i&#39;, j&#39;) are given by ``C[i&#39;, j&#39;]``. The color values of
+          the area in between is interpolated from the corner values.
+          The dimensions of *X* and *Y* must be the same as *C*. When
+          Gouraud shading is used, *edgecolors* is ignored.
+        - &#39;auto&#39;: Choose &#39;flat&#39; if dimensions of *X* and *Y* are one
+          larger than *C*.  Choose &#39;nearest&#39; if dimensions are the same.
+    
+        See :doc:`/gallery/images_contours_and_fields/pcolormesh_grids`
+        for more description.
+    
+    snap : bool, default: False
+        Whether to snap the mesh to pixel boundaries.
+    
+    rasterized: bool, optional
+        Rasterize the pcolormesh when drawing vector graphics.  This can
+        speed up rendering and produce smaller files for large data sets.
+        See also :doc:`/gallery/misc/rasterization_demo`.
+    
+    Returns
+    -------
+    `matplotlib.collections.QuadMesh`
+    
+    Other Parameters
+    ----------------
+    **kwargs
+        Additionally, the following arguments are allowed. They are passed
+        along to the `~matplotlib.collections.QuadMesh` constructor:
+    
+    Properties:
+        agg_filter: a filter function, which takes a (m, n, 3) float array and a dpi value, and returns a (m, n, 3) array
+        alpha: array-like or scalar or None
+        animated: bool
+        antialiased or aa or antialiaseds: bool or list of bools
+        array: ndarray or None
+        capstyle: `.CapStyle` or {&#39;butt&#39;, &#39;projecting&#39;, &#39;round&#39;}
+        clim: (vmin: float, vmax: float)
+        clip_box: `.Bbox`
+        clip_on: bool
+        clip_path: Patch or (Path, Transform) or None
+        cmap: `.Colormap` or str or None
+        color: color or list of rgba tuples
+        contains: unknown
+        edgecolor or ec or edgecolors: color or list of colors or &#39;face&#39;
+        facecolor or facecolors or fc: color or list of colors
+        figure: `.Figure`
+        gid: str
+        hatch: {&#39;/&#39;, &#39;\\&#39;, &#39;|&#39;, &#39;-&#39;, &#39;+&#39;, &#39;x&#39;, &#39;o&#39;, &#39;O&#39;, &#39;.&#39;, &#39;*&#39;}
+        in_layout: bool
+        joinstyle: `.JoinStyle` or {&#39;miter&#39;, &#39;round&#39;, &#39;bevel&#39;}
+        label: object
+        linestyle or dashes or linestyles or ls: str or tuple or list thereof
+        linewidth or linewidths or lw: float or list of floats
+        norm: `.Normalize` or None
+        offset_position: unknown
+        offsets: (N, 2) or (2,) array-like
+        path_effects: `.AbstractPathEffect`
+        picker: None or bool or float or callable
+        pickradius: float
+        rasterized: bool
+        sketch_params: (scale: float, length: float, randomness: float)
+        snap: bool or None
+        transform: `.Transform`
+        url: str
+        urls: list of str or None
+        visible: bool
+        zorder: float
+    
+    See Also
+    --------
+    pcolor : An alternative implementation with slightly different
+        features. For a detailed discussion on the differences see
+        :ref:`Differences between pcolor() and pcolormesh()
+        &lt;differences-pcolor-pcolormesh&gt;`.
+    imshow : If *X* and *Y* are each equidistant, `~.Axes.imshow` can be a
+        faster alternative.
+    
+    Notes
+    -----
+    **Masked arrays**
+    
+    *C* may be a masked array. If ``C[i, j]`` is masked, the corresponding
+    quadrilateral will be transparent. Masking of *X* and *Y* is not
+    supported. Use `~.Axes.pcolor` if you need this functionality.
+    
+    .. _axes-pcolormesh-grid-orientation:
+    
+    **Grid orientation**
+    
+    The grid orientation follows the standard matrix convention: An array
+    *C* with shape (nrows, ncolumns) is plotted with the column number as
+    *X* and the row number as *Y*.
+    
+    .. _differences-pcolor-pcolormesh:
+    
+    **Differences between pcolor() and pcolormesh()**
+    
+    Both methods are used to create a pseudocolor plot of a 2D array
+    using quadrilaterals.
+    
+    The main difference lies in the created object and internal data
+    handling:
+    While `~.Axes.pcolor` returns a `.PolyCollection`, `~.Axes.pcolormesh`
+    returns a `.QuadMesh`. The latter is more specialized for the given
+    purpose and thus is faster. It should almost always be preferred.
+    
+    There is also a slight difference in the handling of masked arrays.
+    Both `~.Axes.pcolor` and `~.Axes.pcolormesh` support masked arrays
+    for *C*. However, only `~.Axes.pcolor` supports masked arrays for *X*
+    and *Y*. The reason lies in the internal handling of the masked values.
+    `~.Axes.pcolor` leaves out the respective polygons from the
+    PolyCollection. `~.Axes.pcolormesh` sets the facecolor of the masked
+    elements to transparent. You can see the difference when using
+    edgecolors. While all edges are drawn irrespective of masking in a
+    QuadMesh, the edge between two adjacent masked quadrilaterals in
+    `~.Axes.pcolor` is not drawn as the corresponding polygons do not
+    exist in the PolyCollection.
+    
+    Another difference is the support of Gouraud shading in
+    `~.Axes.pcolormesh`, which is not available with `~.Axes.pcolor`.
+    
+    .. note::
+        In addition to the above described arguments, this function can take
+        a *data* keyword argument. If such a *data* argument is given,
+        every other argument can also be string ``s``, which is
+        interpreted as ``data[s]`` (unless this raises an exception).
+    
+        Objects passed as **data** must support item access (``data[s]``) and
+        membership test (``s in data``).
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pcm</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">chlordat_fixed</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;magma_r&#39;</span><span class="p">)</span> <span class="c1"># change the colormap with a keyword argument</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Chlorophyl Concentration March 1999&quot;</span><span class="p">);</span> <span class="c1"># add a title to the figure</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/lab_wk3_41_0.png" src="../../_images/lab_wk3_41_0.png" />
+</div>
+</div>
+<p>Here is a link to the <a class="reference external" href="https://matplotlib.org/stable/gallery/color/colormap_reference.html">matplotlib documentation</a> where I got the <code class="docutils literal notranslate"><span class="pre">magma_r</span></code> colormap from (you can add <code class="docutils literal notranslate"><span class="pre">_r</span></code> to any color map to reverse it).</p>
+<p>Next: change the x and y labels to something something meaningful, like latitude and longitude.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function xticks in module matplotlib.pyplot:
+
+xticks(ticks=None, labels=None, **kwargs)
+    Get or set the current tick locations and labels of the x-axis.
+    
+    Pass no arguments to return the current values without modifying them.
+    
+    Parameters
+    ----------
+    ticks : array-like, optional
+        The list of xtick locations.  Passing an empty list removes all xticks.
+    labels : array-like, optional
+        The labels to place at the given *ticks* locations.  This argument can
+        only be passed if *ticks* is passed as well.
+    **kwargs
+        `.Text` properties can be used to control the appearance of the labels.
+    
+    Returns
+    -------
+    locs
+        The list of xtick locations.
+    labels
+        The list of xlabel `.Text` objects.
+    
+    Notes
+    -----
+    Calling this function with no arguments (e.g. ``xticks()``) is the pyplot
+    equivalent of calling `~.Axes.get_xticks` and `~.Axes.get_xticklabels` on
+    the current axes.
+    Calling this function with arguments is the pyplot equivalent of calling
+    `~.Axes.set_xticks` and `~.Axes.set_xticklabels` on the current axes.
+    
+    Examples
+    --------
+    &gt;&gt;&gt; locs, labels = xticks()  # Get the current locations and labels.
+    &gt;&gt;&gt; xticks(np.arange(0, 1, step=0.2))  # Set label locations.
+    &gt;&gt;&gt; xticks(np.arange(3), [&#39;Tom&#39;, &#39;Dick&#39;, &#39;Sue&#39;])  # Set text labels.
+    &gt;&gt;&gt; xticks([0, 1, 2], [&#39;January&#39;, &#39;February&#39;, &#39;March&#39;],
+    ...        rotation=20)  # Set text labels and properties.
+    &gt;&gt;&gt; xticks([])  # Disable xticks.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We&#39;d like to label every 30 degrees and place them in the correct location on our image.</span>
+<span class="c1"># Use our skills at creating, indexing and slicing numpy arrays to create &quot;ticks&quot; and &quot;labels&quot;</span>
+
+<span class="n">numlats</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">chlordat_fixed</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># how many latitude elements in the original image?</span>
+<span class="n">numlons</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">chlordat_fixed</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># how many longitude elements?</span>
+
+<span class="c1"># create arrays to use as &quot;ticks&quot;</span>
+<span class="n">lat_ticks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">numlats</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="c1"># what am i doing here?</span>
+<span class="n">lon_ticks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">numlons</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+
+<span class="c1"># create arrays to use as &quot;labels&quot;</span>
+<span class="n">lat_labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>  <span class="c1"># start, stop, number of elements</span>
+<span class="n">lon_labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span>
+
+
+<span class="c1"># plot it again with lat, lon ticks and labels</span>
+<span class="n">pcm</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">chlordat_fixed</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;magma_r&quot;</span><span class="p">)</span>  <span class="c1"># change the colormap with a keyword argument</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Chlorophyl Concentration March 1999&quot;</span><span class="p">)</span>  <span class="c1"># add a title to the figure</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;longitude (deg)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;latitude (deg)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">lon_ticks</span><span class="p">,</span> <span class="n">lon_labels</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">lat_ticks</span><span class="p">,</span> <span class="n">lat_labels</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/lab_wk3_44_0.png" src="../../_images/lab_wk3_44_0.png" />
+</div>
+</div>
+<p>Add a colourbar so we can interpret our data, just like the one on the oceancolor website.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pcm</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">chlordat_fixed</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;magma_r&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Chlorophyl Concentration March 1999&quot;</span><span class="p">)</span>  <span class="c1"># add a title to the figure</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;longitude (deg)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;latitude (deg)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">lon_ticks</span><span class="p">,</span> <span class="n">lon_labels</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">lat_ticks</span><span class="p">,</span> <span class="n">lat_labels</span><span class="p">)</span>
+
+<span class="c1"># create the colorbar. ticks and labels are assigned much the same as with axis labels</span>
+<span class="n">cbar</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">pcm</span><span class="p">,</span> <span class="n">ticks</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">250</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Chlorophyl Concentration, OCI Algorithm (mg/m3)&quot;</span><span class="p">)</span>
+<span class="n">cbar</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">6</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/lab_wk3_46_0.png" src="../../_images/lab_wk3_46_0.png" />
+</div>
+</div>
+<p>Go through our scientific figure checklist. This checks all the boxes. 9 lines of code to produce the plot. It might be a good idea to save this code somewhere to use as a reference for the next time you need to generate a scientific figure.</p>
+</div>
+<div class="section" id="exercise-2-bathymetry">
+<h2>Exercise 2: Bathymetry<a class="headerlink" href="#exercise-2-bathymetry" title="Permalink to this headline">¶</a></h2>
+<p>The old lab talks about processing unscaled vs scaled data, but we just did a ton of work to rescale our labels in question 1. Whats easy in matlab is hard in python and v.v?</p>
+<p>Same idea as #1: get data, re-format it into something we can understand and parse with python, manipulate the data however we wish, then present the result in a concise, nicely formatted way.</p>
+<p>This dataset is from old MATLAB code, which saves data using the <code class="docutils literal notranslate"><span class="pre">.mat</span></code> extension. A quick search shows that there is a python package called <code class="docutils literal notranslate"><span class="pre">loadmat</span></code> from the scipy library that will handle this file type</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import tools we need to process the new data type</span>
+<span class="kn">from</span> <span class="nn">scipy.io</span> <span class="kn">import</span> <span class="n">loadmat</span>
+
+<span class="n">help</span><span class="p">(</span><span class="n">loadmat</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function loadmat in module scipy.io.matlab.mio:
+
+loadmat(file_name, mdict=None, appendmat=True, **kwargs)
+    Load MATLAB file.
+    
+    Parameters
+    ----------
+    file_name : str
+       Name of the mat file (do not need .mat extension if
+       appendmat==True). Can also pass open file-like object.
+    mdict : dict, optional
+        Dictionary in which to insert matfile variables.
+    appendmat : bool, optional
+       True to append the .mat extension to the end of the given
+       filename, if not already present.
+    byte_order : str or None, optional
+       None by default, implying byte order guessed from mat
+       file. Otherwise can be one of (&#39;native&#39;, &#39;=&#39;, &#39;little&#39;, &#39;&lt;&#39;,
+       &#39;BIG&#39;, &#39;&gt;&#39;).
+    mat_dtype : bool, optional
+       If True, return arrays in same dtype as would be loaded into
+       MATLAB (instead of the dtype with which they are saved).
+    squeeze_me : bool, optional
+       Whether to squeeze unit matrix dimensions or not.
+    chars_as_strings : bool, optional
+       Whether to convert char arrays to string arrays.
+    matlab_compatible : bool, optional
+       Returns matrices as would be loaded by MATLAB (implies
+       squeeze_me=False, chars_as_strings=False, mat_dtype=True,
+       struct_as_record=True).
+    struct_as_record : bool, optional
+       Whether to load MATLAB structs as NumPy record arrays, or as
+       old-style NumPy arrays with dtype=object. Setting this flag to
+       False replicates the behavior of scipy version 0.7.x (returning
+       NumPy object arrays). The default setting is True, because it
+       allows easier round-trip load and save of MATLAB files.
+    verify_compressed_data_integrity : bool, optional
+        Whether the length of compressed sequences in the MATLAB file
+        should be checked, to ensure that they are not longer than we expect.
+        It is advisable to enable this (the default) because overlong
+        compressed sequences in MATLAB files generally indicate that the
+        files have experienced some sort of corruption.
+    variable_names : None or sequence
+        If None (the default) - read all variables in file. Otherwise,
+        `variable_names` should be a sequence of strings, giving names of the
+        MATLAB variables to read from the file. The reader will skip any
+        variable with a name not in this sequence, possibly saving some read
+        processing.
+    simplify_cells : False, optional
+        If True, return a simplified dict structure (which is useful if the mat
+        file contains cell arrays). Note that this only affects the structure
+        of the result and not its contents (which is identical for both output
+        structures). If True, this automatically sets `struct_as_record` to
+        False and `squeeze_me` to True, which is required to simplify cells.
+    
+    Returns
+    -------
+    mat_dict : dict
+       dictionary with variable names as keys, and loaded matrices as
+       values.
+    
+    Notes
+    -----
+    v4 (Level 1.0), v6 and v7 to 7.2 matfiles are supported.
+    
+    You will need an HDF5 Python library to read MATLAB 7.3 format mat
+    files. Because SciPy does not supply one, we do not implement the
+    HDF5 / 7.3 interface here.
+    
+    Examples
+    --------
+    &gt;&gt;&gt; from os.path import dirname, join as pjoin
+    &gt;&gt;&gt; import scipy.io as sio
+    
+    Get the filename for an example .mat file from the tests/data directory.
+    
+    &gt;&gt;&gt; data_dir = pjoin(dirname(sio.__file__), &#39;matlab&#39;, &#39;tests&#39;, &#39;data&#39;)
+    &gt;&gt;&gt; mat_fname = pjoin(data_dir, &#39;testdouble_7.4_GLNX86.mat&#39;)
+    
+    Load the .mat file contents.
+    
+    &gt;&gt;&gt; mat_contents = sio.loadmat(mat_fname)
+    
+    The result is a dictionary, one key/value pair for each variable:
+    
+    &gt;&gt;&gt; sorted(mat_contents.keys())
+    [&#39;__globals__&#39;, &#39;__header__&#39;, &#39;__version__&#39;, &#39;testdouble&#39;]
+    &gt;&gt;&gt; mat_contents[&#39;testdouble&#39;]
+    array([[0.        , 0.78539816, 1.57079633, 2.35619449, 3.14159265,
+            3.92699082, 4.71238898, 5.49778714, 6.28318531]])
+    
+    By default SciPy reads MATLAB structs as structured NumPy arrays where the
+    dtype fields are of type `object` and the names correspond to the MATLAB
+    struct field names. This can be disabled by setting the optional argument
+    `struct_as_record=False`.
+    
+    Get the filename for an example .mat file that contains a MATLAB struct
+    called `teststruct` and load the contents.
+    
+    &gt;&gt;&gt; matstruct_fname = pjoin(data_dir, &#39;teststruct_7.4_GLNX86.mat&#39;)
+    &gt;&gt;&gt; matstruct_contents = sio.loadmat(matstruct_fname)
+    &gt;&gt;&gt; teststruct = matstruct_contents[&#39;teststruct&#39;]
+    &gt;&gt;&gt; teststruct.dtype
+    dtype([(&#39;stringfield&#39;, &#39;O&#39;), (&#39;doublefield&#39;, &#39;O&#39;), (&#39;complexfield&#39;, &#39;O&#39;)])
+    
+    The size of the structured array is the size of the MATLAB struct, not the
+    number of elements in any particular field. The shape defaults to 2-D
+    unless the optional argument `squeeze_me=True`, in which case all length 1
+    dimensions are removed.
+    
+    &gt;&gt;&gt; teststruct.size
+    1
+    &gt;&gt;&gt; teststruct.shape
+    (1, 1)
+    
+    Get the &#39;stringfield&#39; of the first element in the MATLAB struct.
+    
+    &gt;&gt;&gt; teststruct[0, 0][&#39;stringfield&#39;]
+    array([&#39;Rats live on no evil star.&#39;],
+      dtype=&#39;&lt;U26&#39;)
+    
+    Get the first element of the &#39;doublefield&#39;.
+    
+    &gt;&gt;&gt; teststruct[&#39;doublefield&#39;][0, 0]
+    array([[ 1.41421356,  2.71828183,  3.14159265]])
+    
+    Load the MATLAB struct, squeezing out length 1 dimensions, and get the item
+    from the &#39;complexfield&#39;.
+    
+    &gt;&gt;&gt; matstruct_squeezed = sio.loadmat(matstruct_fname, squeeze_me=True)
+    &gt;&gt;&gt; matstruct_squeezed[&#39;teststruct&#39;].shape
+    ()
+    &gt;&gt;&gt; matstruct_squeezed[&#39;teststruct&#39;][&#39;complexfield&#39;].shape
+    ()
+    &gt;&gt;&gt; matstruct_squeezed[&#39;teststruct&#39;][&#39;complexfield&#39;].item()
+    array([ 1.41421356+1.41421356j,  2.71828183+2.71828183j,
+        3.14159265+3.14159265j])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get data</span>
+<span class="n">bathyfile</span> <span class="o">=</span> <span class="n">loadmat</span><span class="p">(</span><span class="s2">&quot;Bathyfile.mat&quot;</span><span class="p">)</span>
+
+<span class="c1"># format data into something we can use</span>
+<span class="c1"># loadmat outputs a dictionary of np arrays. This code extracts the dictionary values to variables</span>
+<span class="n">lon</span> <span class="o">=</span> <span class="n">bathyfile</span><span class="p">[</span><span class="s2">&quot;bath&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span> <span class="c1"># extract latitude array</span>
+<span class="n">lat</span> <span class="o">=</span> <span class="n">bathyfile</span><span class="p">[</span><span class="s2">&quot;bath&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span> <span class="c1"># extract longitude array</span>
+<span class="n">height</span> <span class="o">=</span> <span class="n">bathyfile</span><span class="p">[</span><span class="s2">&quot;bath&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">height</span> <span class="o">=</span> <span class="n">height</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># flip it over as with q1</span>
+
+<span class="c1"># present data</span>
+<span class="n">pcm</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">height</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;BuGn&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lon</span><span class="p">))[::</span><span class="mi">200</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">lon</span><span class="p">)[::</span><span class="mi">200</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lat</span><span class="p">))[::</span><span class="mi">50</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">lat</span><span class="p">)[::</span><span class="mi">50</span><span class="p">]);</span>
+
+<span class="nb">min</span><span class="p">(</span><span class="n">lat</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">lat</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(47.0, 60.0)
+</pre></div>
+</div>
+<img alt="../../_images/lab_wk3_50_1.png" src="../../_images/lab_wk3_50_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="exercise-3">
+<h2>Exercise 3:<a class="headerlink" href="#exercise-3" title="Permalink to this headline">¶</a></h2>
+<p>Create a scientific figure! You will need to use</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load the image and do a &quot;quick and dirty&quot; plot</span>
+<span class="n">chlor</span> <span class="o">=</span> <span class="n">e211</span><span class="o">.</span><span class="n">load_oceancolor</span><span class="p">(</span><span class="s2">&quot;chlorophyl_march1999.png&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">chlor</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.contour.QuadContourSet at 0x7f4b8ba61f40&gt;
+</pre></div>
+</div>
+<img alt="../../_images/lab_wk3_54_1.png" src="../../_images/lab_wk3_54_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># query the size of the numpy array</span>
+<span class="n">chlor</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2160, 4320)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## create arrays to show latitude and longitude as the labels</span>
+<span class="n">num_lats</span> <span class="o">=</span> <span class="n">chlor</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">num_lons</span> <span class="o">=</span> <span class="n">chlor</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">chlor_fixed</span> <span class="o">=</span> <span class="n">chlor</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># flip the array over vertically</span>
+
+<span class="c1"># create the lat array, with the same number of elements as chlor has rows</span>
+<span class="n">lats</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="n">num_lats</span><span class="p">)</span>
+<span class="c1"># create the lon array, with the same number of elements as chlor has cols</span>
+<span class="n">lons</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">180</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="n">num_lons</span><span class="p">)</span>  
+
+<span class="c1"># zoom in on PNW by slicing all 3 arrays</span>
+<span class="n">hmin</span> <span class="o">=</span> <span class="mi">900</span>
+<span class="n">hmax</span> <span class="o">=</span> <span class="mi">1900</span>
+<span class="n">wmin</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">wmax</span> <span class="o">=</span> <span class="mi">1000</span>
+
+<span class="n">chlor_zoomed</span> <span class="o">=</span> <span class="n">chlor_fixed</span><span class="p">[</span><span class="n">hmin</span><span class="p">:</span><span class="n">hmax</span><span class="p">,</span><span class="n">wmin</span><span class="p">:</span><span class="n">wmax</span><span class="p">]</span>
+<span class="n">lats_zoomed</span> <span class="o">=</span> <span class="n">lats</span><span class="p">[</span><span class="n">hmin</span><span class="p">:</span><span class="n">hmax</span><span class="p">]</span>
+<span class="n">lons_zoomed</span> <span class="o">=</span> <span class="n">lons</span><span class="p">[</span><span class="n">wmin</span><span class="p">:</span><span class="n">wmax</span><span class="p">]</span>
+
+<span class="c1"># try the plot again</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">lons_zoomed</span><span class="p">,</span> <span class="n">lats_zoomed</span><span class="p">,</span> <span class="n">chlor_zoomed</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;magma&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">con</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Chlorophyl Concentration, OCI Algorithm (mg/m3)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Phytoplankton in the Pacific Ocean&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;longitude (deg)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;latitude (deg)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0, 0.5, &#39;latitude (deg)&#39;)
+</pre></div>
+</div>
+<img alt="../../_images/lab_wk3_56_1.png" src="../../_images/lab_wk3_56_1.png" />
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./wk03/lab_wk3"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../data_structures_ii.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Data Structures II</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../../wk04/making_plots.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Making Plots</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By UBC<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
