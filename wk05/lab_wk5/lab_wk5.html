@@ -133,7 +133,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../wk02/lab_wk2/lab_wk2.html">
+  <a class="reference internal" href="../../week2_lab/lab_wk2.html">
    Lab Week 2 - Jupyterhub Tutorial
   </a>
  </li>
@@ -386,14 +386,14 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live?urlpath=tree/wk05/lab_wk5/lab_wk5.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk05/lab_wk5/lab_wk5.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://hub.phaustin.org/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk05/lab_wk5/lab_wk5.md&branch=e211_live"><button type="button"
+        <a class="jupyterhub-button" href="https://e211hub.eoastest5.xyz/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk05/lab_wk5/lab_wk5.md&branch=e211_live_main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../../_static/images/logo_jupyterhub.svg"
@@ -561,8 +561,8 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># input() takes in a string, we need to re-cast to float in order to do math</span>
-<span class="n">usrlat</span> <span class="o">=</span>  <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a latitude: &quot;</span><span class="p">))</span>
-<span class="n">usrlon</span> <span class="o">=</span>  <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a longitude: &quot;</span><span class="p">))</span>
+<span class="n">usrlat</span> <span class="o">=</span> <span class="mi">50</span> <span class="c1"># float(input(&quot;Enter a latitude: &quot;))</span>
+<span class="n">usrlon</span> <span class="o">=</span> <span class="mi">50</span> <span class="c1"># float(input(&quot;Enter a longitude: &quot;))</span>
 
 <span class="c1"># assign new variables for the closest indexes to user specified lat &amp; lon</span>
 <span class="n">ilat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">lats</span><span class="o">-</span><span class="n">usrlat</span><span class="p">)</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
@@ -576,23 +576,9 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3318077</span><span class="o">/</span><span class="mf">650780630.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># input() takes in a string, we need to re-cast to float in order to do math</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">usrlat</span> <span class="o">=</span>  <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a latitude: &quot;</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">usrlon</span> <span class="o">=</span>  <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a longitude: &quot;</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># assign new variables for the closest indexes to user specified lat &amp; lon</span>
-
-<span class="nn">~/mini38/envs/e211/lib/python3.8/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1001</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1002</span><span class="s2">         if not self._allow_stdin:</span>
-<span class="ne">-&gt; </span><span class="mi">1003</span><span class="s2">             raise StdinNotImplementedError(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1004</span><span class="s2">                 &quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1005</span><span class="s2">             )</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>User specified variables: lat: 50, lon: 50
+Closest values in array: lat: 49.5, lon: 49.5 at indices [139, 49]
+Value of topo array at that point: 0
 </pre></div>
 </div>
 </div>
@@ -609,19 +595,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3318077</span><span class="o">/</span><span class="mf">202635981.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># output</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">img</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">lons</span><span class="p">,</span> <span class="n">lats</span><span class="p">,</span> <span class="n">topo</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">usrlon</span><span class="p">,</span> <span class="n">usrlat</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">the_label</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;lat: </span><span class="si">{</span><span class="n">lats</span><span class="p">[</span><span class="n">ilat</span><span class="p">]</span><span class="si">}</span><span class="s2"> deg</span><span class="se">\n</span><span class="s2">lon: </span><span class="si">{</span><span class="n">lons</span><span class="p">[</span><span class="n">ilon</span><span class="p">]</span><span class="si">}</span><span class="s2"> deg</span><span class="se">\n</span><span class="s2">height: </span><span class="si">{</span><span class="n">topo</span><span class="p">[</span><span class="n">ilat</span><span class="p">,</span> <span class="n">ilon</span><span class="p">]</span><span class="si">}</span><span class="s2"> m&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">the_label</span><span class="p">,</span> <span class="p">(</span><span class="n">usrlon</span> <span class="o">+</span> <span class="mi">10</span><span class="p">,</span> <span class="n">usrlat</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">);</span>
-
-<span class="ne">NameError</span>: name &#39;usrlon&#39; is not defined
-</pre></div>
-</div>
-<img alt="../../_images/lab_wk5_8_1.png" src="../../_images/lab_wk5_8_1.png" />
+<img alt="../../_images/lab_wk5_8_0.png" src="../../_images/lab_wk5_8_0.png" />
 </div>
 </div>
 </div>
@@ -676,32 +650,6 @@ Slope \approx tan^{-1}\left(\frac{topo(i, j+1) - topo(i, j-1)}{\Delta LON \times
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
-<span class="n">slope</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">((</span><span class="n">topo</span><span class="p">[</span><span class="n">ilat</span><span class="p">,</span> <span class="n">ilon</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> 
-                              <span class="o">-</span> <span class="n">topo</span><span class="p">[</span><span class="n">ilat</span><span class="p">,</span> <span class="n">ilon</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> 
-                              <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mf">111e3</span> 
-                              <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">usrlat</span><span class="p">)))))</span>
-<span class="n">slope</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3318077</span><span class="o">/</span><span class="mf">3342557650.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># andrew&#39;s soln</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">slope</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">((</span><span class="n">topo</span><span class="p">[</span><span class="n">ilat</span><span class="p">,</span> <span class="n">ilon</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span>                               <span class="o">-</span> <span class="n">topo</span><span class="p">[</span><span class="n">ilat</span><span class="p">,</span> <span class="n">ilon</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span>                               <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mf">111e3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span>                               <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">usrlat</span><span class="p">)))))</span>
-
-<span class="ne">NameError</span>: name &#39;ilat&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="b">
 <h3>2b<a class="headerlink" href="#b" title="Permalink to this headline">¶</a></h3>
@@ -716,47 +664,6 @@ Slope \approx tan^{-1}\left(\frac{topo(i, j+1) - topo(i, j-1)}{\Delta LON \times
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
-
-<span class="c1"># formatting for latitude</span>
-<span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">usrlat</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="n">latdir</span> <span class="o">=</span> <span class="s2">&quot;S&quot;</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">latdir</span> <span class="o">=</span> <span class="s2">&quot;N&quot;</span>
-
-<span class="c1"># formatting for slope direction</span>
-<span class="k">if</span> <span class="n">slope</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">:</span>
-    <span class="n">aspect</span> <span class="o">=</span> <span class="s2">&quot;west-facing&quot;</span>
-<span class="k">elif</span> <span class="n">slope</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">:</span>
-    <span class="n">aspect</span> <span class="o">=</span> <span class="s2">&quot;east-facing&quot;</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">aspect</span> <span class="o">=</span> <span class="s2">&quot;flat&quot;</span>
-
-<span class="c1"># make a formatted string</span>
-<span class="n">out_msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;At </span><span class="si">{</span><span class="n">lats</span><span class="p">[</span><span class="n">ilat</span><span class="p">]</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">latdir</span><span class="si">}</span><span class="s2">, </span><span class="si">{</span><span class="n">lons</span><span class="p">[</span><span class="n">ilon</span><span class="p">]</span><span class="si">}</span><span class="s2"> E, the height is </span><span class="se">\</span>
-<span class="si">{</span><span class="n">topo</span><span class="p">[</span><span class="n">ilat</span><span class="p">,</span> <span class="n">ilon</span><span class="p">]</span><span class="si">}</span><span class="s2"> m and the slope is </span><span class="si">{</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">slope</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="s2"> degrees. This is </span><span class="si">{</span><span class="n">aspect</span><span class="si">}</span><span class="s2">.&quot;</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">out_msg</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3318077</span><span class="o">/</span><span class="mf">2487950347.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># formatting for latitude</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">usrlat</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">latdir</span> <span class="o">=</span> <span class="s2">&quot;S&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="k">else</span><span class="p">:</span>
-
-<span class="ne">NameError</span>: name &#39;usrlat&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -801,137 +708,6 @@ Slope \approx tan^{-1}\left(\frac{topo(i, j+1) - topo(i, j-1)}{\Delta LON \times
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
-
-<span class="c1">### imports ###</span>
-<span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span> 
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### inputs ###</span>
-
-<span class="c1"># dataset</span>
-<span class="n">topo</span> <span class="o">=</span> <span class="n">e211</span><span class="o">.</span><span class="n">load_topo</span><span class="p">(</span><span class="s2">&quot;lab5_topo.mat&quot;</span><span class="p">)</span>
-<span class="n">lats</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">89.5</span><span class="p">,</span> <span class="mf">89.5</span><span class="p">,</span> <span class="n">topo</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">lons</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">359.5</span><span class="p">,</span> <span class="n">topo</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-
-<span class="c1"># user inputs</span>
-<span class="n">usrlat</span> <span class="o">=</span>  <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a latitude: &quot;</span><span class="p">))</span>
-<span class="n">usrlon</span> <span class="o">=</span>  <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a longitude: &quot;</span><span class="p">))</span>
-<span class="n">ilat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">lats</span><span class="o">-</span><span class="n">usrlat</span><span class="p">)</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
-<span class="n">ilon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">lons</span><span class="o">-</span><span class="n">usrlon</span><span class="p">)</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3318077</span><span class="o">/</span><span class="mf">3126565000.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> 
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># user inputs</span>
-<span class="ne">----&gt; </span><span class="mi">9</span> <span class="n">usrlat</span> <span class="o">=</span>  <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a latitude: &quot;</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">usrlon</span> <span class="o">=</span>  <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a longitude: &quot;</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="n">ilat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">lats</span><span class="o">-</span><span class="n">usrlat</span><span class="p">)</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
-
-<span class="nn">~/mini38/envs/e211/lib/python3.8/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1001</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1002</span><span class="s2">         if not self._allow_stdin:</span>
-<span class="ne">-&gt; </span><span class="mi">1003</span><span class="s2">             raise StdinNotImplementedError(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1004</span><span class="s2">                 &quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1005</span><span class="s2">             )</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### processing ###</span>
-
-<span class="c1"># filter inputs</span>
-<span class="k">if</span> <span class="n">ilon</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">lons</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-    <span class="n">ilon</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="c1"># (dont need to do anything for ilon = 0 case, indexing [-1] automatically solves it!)</span>
-
-<span class="c1"># calculate slope    </span>
-<span class="n">slope</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">((</span><span class="n">topo</span><span class="p">[</span><span class="n">ilat</span><span class="p">,</span> <span class="n">ilon</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> 
-                              <span class="o">-</span> <span class="n">topo</span><span class="p">[</span><span class="n">ilat</span><span class="p">,</span> <span class="n">ilon</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> 
-                              <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mf">111e3</span> 
-                              <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">usrlat</span><span class="p">)))))</span>
- 
-<span class="c1"># formatting for slope direction</span>
-<span class="k">if</span> <span class="n">slope</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">:</span>
-    <span class="n">aspect</span> <span class="o">=</span> <span class="s2">&quot;west&quot;</span>
-<span class="k">elif</span> <span class="n">slope</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">:</span>
-    <span class="n">aspect</span> <span class="o">=</span> <span class="s2">&quot;east&quot;</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">aspect</span> <span class="o">=</span> <span class="s2">&quot;flat&quot;</span>
-    
-<span class="c1"># generate a variable to place the label correctly (bonus?)</span>
-<span class="k">if</span> <span class="n">ilon</span> <span class="o">&lt;</span> <span class="mi">250</span><span class="p">:</span>
-    <span class="n">offset</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">offset</span> <span class="o">=</span> <span class="o">-</span><span class="mi">70</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3318077</span><span class="o">/</span><span class="mf">3798314269.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># filter inputs</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="k">if</span> <span class="n">ilon</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">lons</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">ilon</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># (dont need to do anything for ilon = 0 case, indexing [-1] automatically solves it!)</span>
-
-<span class="ne">NameError</span>: name &#39;ilon&#39; is not defined
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### output ###</span>
-
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">lons</span><span class="p">,</span> <span class="n">lats</span><span class="p">,</span> <span class="n">topo</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">usrlon</span><span class="p">,</span> <span class="n">usrlat</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
-<span class="n">the_label</span> <span class="o">=</span> <span class="p">(</span>
-    <span class="sa">f</span><span class="s2">&quot;lat: </span><span class="si">{</span><span class="n">lats</span><span class="p">[</span><span class="n">ilat</span><span class="p">]</span><span class="si">}</span><span class="s2"> deg</span><span class="se">\n</span><span class="s2">lon: </span><span class="si">{</span><span class="n">lons</span><span class="p">[</span><span class="n">ilon</span><span class="p">]</span><span class="si">}</span><span class="s2"> deg</span><span class="se">\n</span><span class="s2">height: </span><span class="si">{</span><span class="n">topo</span><span class="p">[</span><span class="n">ilat</span><span class="p">,</span> <span class="n">ilon</span><span class="p">]</span><span class="si">}</span><span class="s2"> m&quot;</span>
-    <span class="o">+</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">slope: </span><span class="si">{</span><span class="nb">round</span><span class="p">(</span><span class="n">slope</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span><span class="si">}</span><span class="se">\n</span><span class="s2">aspect: </span><span class="si">{</span><span class="n">aspect</span><span class="si">}</span><span class="s2">&quot;</span>
-<span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">the_label</span><span class="p">,</span> <span class="p">(</span><span class="n">usrlon</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">usrlat</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;white&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;longitude (deg)&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;latitude (deg)&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Topographical Map of Earth&quot;</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3318077</span><span class="o">/</span><span class="mf">1641924728.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">lons</span><span class="p">,</span> <span class="n">lats</span><span class="p">,</span> <span class="n">topo</span><span class="p">)</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">usrlon</span><span class="p">,</span> <span class="n">usrlat</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">the_label</span> <span class="o">=</span> <span class="p">(</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="sa">f</span><span class="s2">&quot;lat: </span><span class="si">{</span><span class="n">lats</span><span class="p">[</span><span class="n">ilat</span><span class="p">]</span><span class="si">}</span><span class="s2"> deg</span><span class="se">\n</span><span class="s2">lon: </span><span class="si">{</span><span class="n">lons</span><span class="p">[</span><span class="n">ilon</span><span class="p">]</span><span class="si">}</span><span class="s2"> deg</span><span class="se">\n</span><span class="s2">height: </span><span class="si">{</span><span class="n">topo</span><span class="p">[</span><span class="n">ilat</span><span class="p">,</span> <span class="n">ilon</span><span class="p">]</span><span class="si">}</span><span class="s2"> m&quot;</span>
-
-<span class="ne">NameError</span>: name &#39;usrlon&#39; is not defined
-</pre></div>
-</div>
-<img alt="../../_images/lab_wk5_20_1.png" src="../../_images/lab_wk5_20_1.png" />
 </div>
 </div>
 </div>

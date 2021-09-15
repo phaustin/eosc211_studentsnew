@@ -22,32 +22,30 @@ kernelspec:
 1. Get more experience with Numpy arrays
 2. Use built in functions to write efficient, *Pythonic* code
 
-Useful references:
-
-[Professor Kazarinoff](https://github.com/ProfessorKazarinoff/Problem-Solving-with-Python-37-Edition/blob/master/notebooks/05-NumPy-and-Arrays/05.03-Python-Lists-and-NumPy-Arrays.ipynb)
-
-[Numpy Documentation](https://numpy.org/doc/stable/reference/generated/numpy.array.html)
-
 ```{code-cell} ipython3
 import numpy as np
 ```
 
-## Question 1)
+## Question 1
 
 **A) Execute the following cells and describe IN WORDS what is happening in each cell**
 
 ```{code-cell} ipython3
-lats=np.arange(1,21)
-lats=np.arange(10,16)
+lats = np.arange(1,21)
+lats = np.arange(10,16)
 ```
 
 ```{code-cell} ipython3
 L2 = np.array([lats[2], lats[4]])
 ```
 
+your answer here
+
 ```{code-cell} ipython3
 L3 = np.array([lats[-1], lats[0]])
 ```
+
+your answer here
 
 ```{code-cell} ipython3
 L4 = lats[lats > 13]
@@ -96,19 +94,7 @@ lats
 # your code here
 ```
 
-```{code-cell} ipython3
-# andrew's soln
-lats = lats.reshape(len(lats))
-lats
-```
-
 ## Question 3
-
-old question 3 from matlab version introduces OO data structure featuring a student 'joe lunchbucket', who's attributes include birthday and grade in EOSC211. Replace with different content and do talk about classes later?
-
-+++
-
-## Question 4
 
 **Along with `+`, `-`, `*`, `/`, python also defines the *floor division operator* `//` and the *modulo operator* `%`. Floor division (`//`) outputs the *quotient* of two integers, and modulo (`%`) outputs the remainder. Example code:**
 
@@ -124,15 +110,4 @@ old question 3 from matlab version introduces OO data structure featuring a stud
 
 ```{code-cell} ipython3
 # your code here
-```
-
-```{code-cell} ipython3
-# andrew's soln
-A = np.array([[1, 2, 3, 4, 5],[6, 7, 8, 9, 10]])
-B = A[A % 2 == 0]
-B
-```
-
-```{code-cell} ipython3
-
 ```

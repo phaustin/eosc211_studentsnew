@@ -66,12 +66,12 @@ Does everything look alright with our preliminary data visualization? If so, let
 
 We would like to our program to reference points on our map by their latitude/longitude coordinates, and be able to take in any arbitrary pair of coordinates and process the closest available point on the map. We can use python's built in [input()](https://www.w3schools.com/python/ref_func_input.asp) function to assign coordinate variables based on user input, and the [argmin()](https://numpy.org/doc/stable/reference/generated/numpy.argmin.html) attribute of numpy arrays to find the closest point on the map to the user specified lat/lon. 
 
-Take a second to understand what the code is doing in the following cell. We need to make sure to properly differentiate between the *lat/lon coordinates* of a location (which a user will specify), the *array value* (i.e height above sea level stored in the array `topo`), and the *array index* that references that point in the array. 
+Take a second to understand what the code is doing in the following cell. We need to make sure to properly differentiate between the *lat/lon coordinates* of a location (which a user will specify), the *array value* (i.e height above sea level stored in the array `topo`), and the *array index* that references that point in the array.
 
 ```{code-cell} ipython3
 # input() takes in a string, we need to re-cast to float in order to do math
-usrlat =  float(input("Enter a latitude: "))
-usrlon =  float(input("Enter a longitude: "))
+usrlat = 50 # float(input("Enter a latitude: "))
+usrlon = 50 # float(input("Enter a longitude: "))
 
 # assign new variables for the closest indexes to user specified lat & lon
 ilat = np.abs(lats-usrlat).argmin()
@@ -102,7 +102,6 @@ Slope \approx tan^{-1}\left(\frac{topo(i, j+1) - topo(i, j-1)}{\Delta LON \times
 $$
 
 
-
 | Symbol  | Variable      |  Units   |
 |:--|:----------------------------------|:------------|
 | $topo$     | topography array      | $height$ ($m$) |
@@ -113,19 +112,11 @@ $$
 | $cos(LAT)$  | a correction factor to take into account longitude convergence at the poles     | --  |
 
 ### 2a
+
 In the cell below, write code to make this work for points well within the array (i.e. away from the edges of the map). Make sure the trigonometric functions you use are for degrees and not radians. You may find the functions `np.deg2rad()` and `np.rad2deg()` helpful. 
 
 ```{code-cell} ipython3
 # your code here
-```
-
-```{code-cell} ipython3
-# andrew's soln
-slope = np.rad2deg(np.arctan((topo[ilat, ilon + 1] 
-                              - topo[ilat, ilon - 1]) 
-                              / (2 * 111e3 
-                              * np.cos(np.deg2rad(usrlat)))))
-slope
 ```
 
 ### 2b
@@ -144,30 +135,6 @@ In part 3, you will create a scientific figure with the slope and aspect annotat
 
 ```{code-cell} ipython3
 # your code here
-```
-
-```{code-cell} ipython3
-# andrew's soln
-
-# formatting for latitude
-if int(usrlat) < 0:
-    latdir = "S"
-else:
-    latdir = "N"
-
-# formatting for slope direction
-if slope > 0.1:
-    aspect = "west-facing"
-elif slope < -0.1:
-    aspect = "east-facing"
-else:
-    aspect = "flat"
-
-# make a formatted string
-out_msg = f"At {lats[ilat]} {latdir}, {lons[ilon]} E, the height is \
-{topo[ilat, ilon]} m and the slope is {np.round(slope,3)} degrees. This is {aspect}."
-
-print(out_msg)
 ```
 
 ##  Part 3: Selections - Check Arguments
@@ -210,71 +177,3 @@ Generate a scientific figure with the following:
 # your code here
 ```
 
-```{code-cell} ipython3
-# andrew's soln
-
-### imports ###
-from e211_lib import e211 
-from matplotlib import pyplot as plt
-import numpy as np
-```
-
-```{code-cell} ipython3
-### inputs ###
-
-# dataset
-topo = e211.load_topo("lab5_topo.mat")
-lats = np.linspace(-89.5, 89.5, topo.shape[0])
-lons = np.linspace(0.5, 359.5, topo.shape[1])
-
-# user inputs
-usrlat =  float(input("Enter a latitude: "))
-usrlon =  float(input("Enter a longitude: "))
-ilat = np.abs(lats-usrlat).argmin()
-ilon = np.abs(lons-usrlon).argmin()
-```
-
-```{code-cell} ipython3
-### processing ###
-
-# filter inputs
-if ilon == len(lons)-1:
-    ilon = 0
-# (dont need to do anything for ilon = 0 case, indexing [-1] automatically solves it!)
-
-# calculate slope    
-slope = np.rad2deg(np.arctan((topo[ilat, ilon + 1] 
-                              - topo[ilat, ilon - 1]) 
-                              / (2 * 111e3 
-                              * np.cos(np.deg2rad(usrlat)))))
- 
-# formatting for slope direction
-if slope > 0.1:
-    aspect = "west"
-elif slope < -0.1:
-    aspect = "east"
-else:
-    aspect = "flat"
-    
-# generate a variable to place the label correctly (bonus?)
-if ilon < 250:
-    offset = 10
-else:
-    offset = -70
-```
-
-```{code-cell} ipython3
-### output ###
-
-fig, ax = plt.subplots()
-ax.contourf(lons, lats, topo)
-ax.annotate("X", (usrlon, usrlat), color="red")
-the_label = (
-    f"lat: {lats[ilat]} deg\nlon: {lons[ilon]} deg\nheight: {topo[ilat, ilon]} m"
-    + f"\nslope: {round(slope,3)}\naspect: {aspect}"
-)
-ax.annotate(the_label, (usrlon + offset, usrlat), color="white")
-ax.set_xlabel("longitude (deg)")
-ax.set_ylabel("latitude (deg)")
-ax.set_title("Topographical Map of Earth");
-```

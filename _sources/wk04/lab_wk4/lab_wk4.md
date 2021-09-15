@@ -26,19 +26,6 @@ kernelspec:
 
 4. More plots!
 
-
-### Intro
-
-intro
-
-### Themes
-
-computer math + - * / ** -- on scalars and vectors (arrays)
-
-order of operations
-
-plt.subplots() syntax, intro to OO programming?
-
 ```{code-cell} ipython3
 import numpy as np
 from matplotlib import pyplot as plt 
@@ -231,51 +218,10 @@ Write a code cell which defines variables for all the constants used (i.e. $L$, 
 # your code here
 ```
 
-```{code-cell} ipython3
-# andrew's soln
-
-# input
-Tc = 25  # deg C
-
-# internal definitions
-Tk = Tc + 273.15  # K
-e0 = 611  # Pa 
-Lvap = 2.5e6  # J/kg
-T0 = 273  # K
-Rv = 461  # J/kg/K
-
-# calculations
-esat = e0 * np.exp((Lvap / Rv) * (1 / T0 - 1 / Tk))  # eqn 1
-
-# outputs
-print(esat)
-```
-
 Now add a cell to  calculate  the  air  density  at $T= 25^oC,RH= 50\%$,  at  surface  pressure  ($P= 102000Pa$).   The  answer  should  be  1.1847106098829943 kg/m$^3$ (or  1.184704073721439  if $\varepsilon≡R_d/R_v$).   Note  that  increasing  the  humidity  (i.e.   adding  more  water  vapour)  decreases  the  density since H$_2$O is displacing heavier N$_2$ and O$_2$ molecules.
 
 ```{code-cell} ipython3
 # your code here
-```
-
-```{code-cell} ipython3
-# andrew's soln
-
-# input
-RH = 50  # %
-pres = 102000  # Pa
-
-# internal definitions (this cell knows about the variables defined in the cell above,
-# so just add the new ones as needed)
-epsilon = 0.622  # vap/air by mass
-Rd = 287  # J/kg/K
-
-# calculations
-e_x = esat * RH / 100  # eqn 2
-mixrat = epsilon * e_x / (pres - e_x)  # eqn 3
-rho = pres / (Rd * Tk * (1 + 0.61 * mixrat))
-
-# output
-print(rho)
 ```
 
 Calculate the saturation vapour pressure $e_s$ for temperatures ranging from -40$^o$C to 30$^o$C. Be sure to stick to the format of *input, definitions, calulations, output*.
@@ -284,41 +230,10 @@ Calculate the saturation vapour pressure $e_s$ for temperatures ranging from -40
 # your code here
 ```
 
-```{code-cell} ipython3
-# andrew's soln
-
-# input
-Tc = np.arange(-40, 31)
-
-# definitions
-Tk = Tc + 273.15  # K
-
-# calculations
-esat = e0 * np.exp((Lvap / Rv) * (1 / T0 - 1 / Tk))  # eqn 1
-
-# output (a plot!)
-esat
-```
-
 Next, calculate and plot the mixing ratio $r$ as a function of temperature for $RH= 100\%$ and $P= 90000Pa$ (about 1 km above the surface).
 
 ```{code-cell} ipython3
 # your code here
-```
-
-```{code-cell} ipython3
-# andrew's soln
-
-# input
-RH = 100  # %
-pres = 90000  # Pa
-
-# calculations
-e_x = esat * RH / 100  # eqn 2
-mixrat = epsilon * e_x / (pres - e_x)  # eqn 3
-
-# output
-mixrat
 ```
 
 Now, use the `subplots` function to generate a scientific figure as follows:
@@ -331,16 +246,4 @@ Now, use the `subplots` function to generate a scientific figure as follows:
 
 ```{code-cell} ipython3
 # your code here
-```
-
-```{code-cell} ipython3
-# andrew's soln
-fig, ax = plt.subplots(2, figsize=(10, 5), sharex=True)
-fig.suptitle("Saturation Vapour Pressure and Mixing Ratio as Functions of Temperature", fontsize=16)
-ax[0].plot(Tc, esat)
-ax[0].set_ylabel("Saturation Vapour Pressure (Pa)")
-
-ax[1].plot(Tc, mixrat, color="lightgreen")
-ax[1].set_xlabel("Temp ($^o$C)")
-ax[1].set_ylabel("Mixing Ratio (kg/kg)");
 ```
