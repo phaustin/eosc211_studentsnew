@@ -79,5 +79,5 @@ mags = [4.2000, 4.1000, 4.1000, 4.1000, 4.3000, 4.2000, 4.4000, 4.1000, 4.0000, 
 Describe what is happening on this one line of code (it's surprisingly a lot). List the steps in order
 
 ```{code-cell} ipython3
-y3 = np.max(mags[3:8])
+y3 = max(mags[3:8])
 ```
