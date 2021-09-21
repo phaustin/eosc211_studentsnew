@@ -132,11 +132,6 @@
    Some Review Plus Built-In Functions, Arrays Preview
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../week2_lab/lab_wk2.html">
-   Lab Week 2 - Jupyterhub Tutorial
-  </a>
- </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -531,6 +526,18 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_204939</span><span class="o">/</span><span class="mf">35110049.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span> <span class="c1"># get all the packages from the e211 library (developed specifically for this course)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># get all the packages associated with numpy, and assign numpy a nickname &#39;np&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># get just the package called &#39;pyplot&#39; from the matplotlib library, nicknamed &#39;plt&#39;</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;e211_lib&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>These are all the dependencies we will need to complete this lab. If we decide later that we want to use something else, we can always add to this cell and re-run it.</p>
 </div>
@@ -547,7 +554,15 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>numpy.ndarray
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_204939</span><span class="o">/</span><span class="mf">3810147705.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">raw_bathdata</span> <span class="o">=</span> <span class="n">e211</span><span class="o">.</span><span class="n">load_mat</span><span class="p">(</span><span class="s2">&quot;Bathyfile.mat&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># what is the data type of the new variable we just created?</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">type</span><span class="p">(</span><span class="n">raw_bathdata</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;e211&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -555,24 +570,34 @@
 <p>Now that we have the data in a format we can use, let’s explore! We can use built in functions to find out more things than just the data type:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">raw_bathdata</span><span class="p">)</span> <span class="c1"># how big is the array?</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">raw_bathdata</span><span class="p">)</span>  <span class="c1"># how big is the array?</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(391, 1201)
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_204939</span><span class="o">/</span><span class="mf">2790929334.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">raw_bathdata</span><span class="p">)</span>  <span class="c1"># how big is the array?</span>
+
+<span class="ne">NameError</span>: name &#39;np&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">raw_bathdata</span><span class="p">)</span> <span class="c1"># what is the deepest point? (units are in m above/below sea level)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">raw_bathdata</span><span class="p">)</span>  <span class="c1"># what is the deepest point? (units are in m above/below sea level)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-5243
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_204939</span><span class="o">/</span><span class="mf">2209761021.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">raw_bathdata</span><span class="p">)</span>  <span class="c1"># what is the deepest point? (units are in m above/below sea level)</span>
+
+<span class="ne">NameError</span>: name &#39;np&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -585,7 +610,14 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/lab_wk3_9_0.png" src="../../_images/lab_wk3_9_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_204939</span><span class="o">/</span><span class="mf">1290833645.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">raw_bathdata</span><span class="p">);</span>
+
+<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <p>We have successfully imported the .mat data as an array, but something is clearly wrong. This is supposed to be geographical information of BC and the Pacific Ocean. Can you recognize Vancouver Island? the Gulf of Alaska? The Rocky Mountains? What has happened here and how might we fix it?</p>
@@ -602,13 +634,21 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/lab_wk3_11_0.png" src="../../_images/lab_wk3_11_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_204939</span><span class="o">/</span><span class="mf">719132186.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">bathdata_fixed</span> <span class="o">=</span> <span class="n">raw_bathdata</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="c1"># flip the array over and assign it to a new variable</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">bathdata_fixed</span><span class="p">);</span> <span class="c1"># try another quick visualization</span>
+
+<span class="ne">NameError</span>: name &#39;raw_bathdata&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <p>Much better! Now let’s think about generating a way to label our X and Y axes with something meaningful. Currently, the labels refer to the <em>array index</em> of each point on our plot. A far more useful reference would be the latitude (on the y axis) and longitude (on the x axis). This particular image is from latitude 47<span class="math notranslate nohighlight">\(^o\)</span> to 60<span class="math notranslate nohighlight">\(^o\)</span> N and longitude -150<span class="math notranslate nohighlight">\(^o\)</span> to -110 <span class="math notranslate nohighlight">\(^o\)</span>E. The following code generates arrays that with the lat and lon of each row and column in the image, then passes those into the <code class="docutils literal notranslate"><span class="pre">contourf</span></code> function, which then creates the plot with the new labels applied. Take a second to understand what is happening at each line of code. You may want to try running in a cell <code class="docutils literal notranslate"><span class="pre">help()</span></code> with the name of a built-in function for more information on how that function works.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">latlen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">bathdata_fixed</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># assign the height and width of the image to new variables</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">latlen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">bathdata_fixed</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># assign the height and width of the image to new vars</span>
 <span class="n">lonlen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">bathdata_fixed</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
 
 <span class="n">lats</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="n">latlen</span><span class="p">)</span> <span class="c1"># create arrays for lat and lon</span>
@@ -620,7 +660,18 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/lab_wk3_13_0.png" src="../../_images/lab_wk3_13_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_204939</span><span class="o">/</span><span class="mf">2843981835.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">latlen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">bathdata_fixed</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="c1"># assign the height and width of the image to new vars</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">lonlen</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">bathdata_fixed</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">lats</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="n">latlen</span><span class="p">)</span> <span class="c1"># create arrays for lat and lon</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">lons</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">150</span><span class="p">,</span> <span class="o">-</span><span class="mi">110</span><span class="p">,</span> <span class="n">lonlen</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;np&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <p>Maybe we are only interested in the bathymetry near Vancouver Island. We can “zoom” in on a particular area, using slicing to select a section of the original array. <strong>IMPORTANT:</strong> We need to slice the <code class="docutils literal notranslate"><span class="pre">lats</span></code> and <code class="docutils literal notranslate"><span class="pre">lons</span></code> arrays at the same intervals <em>before</em> we try to re-create the plot, or else we will get an error.</p>
@@ -628,14 +679,26 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bath_zoomed</span> <span class="o">=</span> <span class="n">bathdata_fixed</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">150</span><span class="p">,</span><span class="mi">500</span><span class="p">:</span><span class="mi">900</span><span class="p">]</span>
 <span class="n">lats_zoomed</span> <span class="o">=</span> <span class="n">lats</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">150</span><span class="p">]</span>
-<span class="n">lons_zoomed</span> <span class="o">=</span> <span class="n">lons</span><span class="p">[</span><span class="mi">500</span><span class="p">:</span><span class="mi">900</span><span class="p">]</span> <span class="c1"># make sure the slices match between the coordinates and the original data</span>
+<span class="n">lons_zoomed</span> <span class="o">=</span> <span class="n">lons</span><span class="p">[</span><span class="mi">500</span><span class="p">:</span><span class="mi">900</span><span class="p">]</span> <span class="c1"># make sure the slices match between the</span>
+                            <span class="c1"># coordinates and the original data</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">lons_zoomed</span><span class="p">,</span> <span class="n">lats_zoomed</span><span class="p">,</span> <span class="n">bath_zoomed</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/lab_wk3_15_0.png" src="../../_images/lab_wk3_15_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_204939</span><span class="o">/</span><span class="mf">3695033424.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">bath_zoomed</span> <span class="o">=</span> <span class="n">bathdata_fixed</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">150</span><span class="p">,</span><span class="mi">500</span><span class="p">:</span><span class="mi">900</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">lats_zoomed</span> <span class="o">=</span> <span class="n">lats</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">150</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">lons_zoomed</span> <span class="o">=</span> <span class="n">lons</span><span class="p">[</span><span class="mi">500</span><span class="p">:</span><span class="mi">900</span><span class="p">]</span> <span class="c1"># make sure the slices match between the</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>                             <span class="c1"># coordinates and the original data</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+
+<span class="ne">NameError</span>: name &#39;bathdata_fixed&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -644,18 +707,32 @@
 <p>If we ara satisfied with our data processing, it is now time to present our result with a scientific figure. Go through the checklist and add code to our plot until we tick all of the boxes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">con</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">lons_zoomed</span><span class="p">,</span> <span class="n">lats_zoomed</span><span class="p">,</span> <span class="n">bath_zoomed</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;terrain&quot;</span><span class="p">)</span> <span class="c1"># change the colormap to something suitable</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># change the colormap to something suitable</span>
+<span class="n">con</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">lons_zoomed</span><span class="p">,</span> <span class="n">lats_zoomed</span><span class="p">,</span> <span class="n">bath_zoomed</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;terrain&quot;</span><span class="p">)</span>
+
+<span class="c1"># add nice labels</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Bathymetry Near Vancouver Island&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;longitude (deg)&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;latitude (deg)&quot;</span><span class="p">)</span>
 
 <span class="c1"># create a colorbar with labels to show the numerical values corresponding to each color</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">con</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Height Above/Below Sea Level (m)&quot;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">con</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Height Above/Below Sea Level (m)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/lab_wk3_17_0.png" src="../../_images/lab_wk3_17_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_204939</span><span class="o">/</span><span class="mf">1876633776.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># change the colormap to something suitable</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">con</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">lons_zoomed</span><span class="p">,</span> <span class="n">lats_zoomed</span><span class="p">,</span> <span class="n">bath_zoomed</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;terrain&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># add nice labels</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Bathymetry Near Vancouver Island&quot;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <p>Go through our checklist:</p>
@@ -666,7 +743,7 @@
 <li><p>[x] Does the figure <em>make sense</em> just by looking at it? - look at the colormap we chose: dark blue maps to deep ocean, white for snowy mountains. this makes the figure <em>visually intuitive</em></p></li>
 <li><p>[x] Does it <em>look good</em>? - beauty is in the eye of the beholder, but I think it looks great</p></li>
 </ul>
-<p>For changing the colormap, check out the <a class="reference external" href="https://matplotlib.org/stable/gallery/color/colormap_reference.html">Matplotlib Documentation</a> for a list to choose from. Try inserting the names of other colormaps in place of “Blues_r” and see what happens. Note you can add “_r” to the end of any of cmap name to reverse it.</p>
+<p>For changing the colormap, check out the <a class="reference external" href="https://matplotlib.org/stable/gallery/color/colormap_reference.html">Matplotlib Documentation</a> for a list to choose from. Try inserting the names of other colormaps in place of “terrain” and see what happens. Note you can add “_r” to the end of any of cmap name to reverse it.</p>
 <p>Finally, as a last step, restart the kernel and re-run the whole notebook to check for errors (click the <span class="math notranslate nohighlight">\(\blacktriangleright\blacktriangleright\)</span> button on the toolbar). This is important, so that the next time you run your notebook (or someone else, perhaps the person marking it), you know you will get the same result that you have now.</p>
 </div>
 </div>
@@ -685,6 +762,13 @@ Your task is to go through much the sama analysis as we did in the tutorial: imp
 <li><p>Present your data, making sure to meet all the requirements for a scientific figure. Use a colormap other than the default.</p></li>
 <li><p>Final check: run your whole notebook again and check for errors using the <span class="math notranslate nohighlight">\(\blacktriangleright\blacktriangleright\)</span> button.</p></li>
 </ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here (create as many additional cells as you like)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

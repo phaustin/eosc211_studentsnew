@@ -132,11 +132,6 @@
    Some Review Plus Built-In Functions, Arrays Preview
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week2_lab/lab_wk2.html">
-   Lab Week 2 - Jupyterhub Tutorial
-  </a>
- </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -504,6 +499,19 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_204716</span><span class="o">/</span><span class="mf">134351433.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">scipy.io</span> <span class="kn">import</span> <span class="n">loadmat</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;e211_lib&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -512,6 +520,20 @@
 
 <span class="c1"># or load the .npy file with</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;drifter_data.npy&quot;</span><span class="p">,</span> <span class="n">allow_pickle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_204716</span><span class="o">/</span><span class="mf">968003011.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># There is a function in the library to convert the original .mat file to the new format</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">data</span> <span class="o">=</span> <span class="n">e211</span><span class="o">.</span><span class="n">clean_a1_data</span><span class="p">(</span><span class="s2">&quot;Drifter_dataset.mat&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># or load the .npy file with</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;drifter_data.npy&quot;</span><span class="p">,</span> <span class="n">allow_pickle</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;e211&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -598,7 +620,17 @@ Finally, add to the plot a text line that states how many tracks fall into each 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ast1_5_0.png" src="../_images/ast1_5_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_204716</span><span class="o">/</span><span class="mf">120966178.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># plot the drifters</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">for</span> <span class="n">dat</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">dat</span><span class="p">[</span><span class="s2">&quot;lons&quot;</span><span class="p">],</span> <span class="n">dat</span><span class="p">[</span><span class="s2">&quot;lats&quot;</span><span class="p">])</span>
+
+<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -613,7 +645,16 @@ Finally, add to the plot a text line that states how many tracks fall into each 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ast1_6_0.png" src="../_images/ast1_6_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_204716</span><span class="o">/</span><span class="mf">41015602.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>            <span class="s2">&quot;lats&quot;</span><span class="p">:</span><span class="n">basemap_in</span><span class="p">[</span><span class="s2">&quot;ncst&quot;</span><span class="p">][:,</span><span class="mi">1</span><span class="p">]}</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">basemap</span><span class="p">[</span><span class="s2">&quot;lons&quot;</span><span class="p">],</span> <span class="n">basemap</span><span class="p">[</span><span class="s2">&quot;lats&quot;</span><span class="p">]);</span>
+
+<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -642,7 +683,18 @@ Finally, add to the plot a text line that states how many tracks fall into each 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ast1_7_0.png" src="../_images/ast1_7_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_204716</span><span class="o">/</span><span class="mf">2215410514.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># this is line for line the lab 3 tutorial section</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">raw_bathdata</span> <span class="o">=</span> <span class="n">e211</span><span class="o">.</span><span class="n">load_mat</span><span class="p">(</span><span class="s2">&quot;Bathyfile.mat&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">bathdata_fixed</span> <span class="o">=</span> <span class="n">raw_bathdata</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+
+<span class="ne">NameError</span>: name &#39;e211&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <div class="cell docutils container">
@@ -674,7 +726,18 @@ Finally, add to the plot a text line that states how many tracks fall into each 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ast1_8_0.png" src="../_images/ast1_8_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_204716</span><span class="o">/</span><span class="mf">2110341650.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># readjust the map size to clearly show the drifters, and use conditional sampling</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># to make our map only show land and sea rather than all elevetions -- less clutter</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">lats</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">47</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="n">latlen</span><span class="p">)</span>  <span class="c1"># create arrays for lat and lon</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">lons</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">150</span><span class="p">,</span> <span class="o">-</span><span class="mi">110</span><span class="p">,</span> <span class="n">lonlen</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+
+<span class="ne">NameError</span>: name &#39;latlen&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <p>good start, fix this later on</p>
@@ -790,7 +853,18 @@ after conditional sampling:
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ast1_13_0.png" src="../_images/ast1_13_0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_204716</span><span class="o">/</span><span class="mf">1303581793.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Do the plot</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">ax</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">lons_zoomed</span><span class="p">,</span> <span class="n">lats_zoomed</span><span class="p">,</span> <span class="n">bath_zoomed</span><span class="p">)</span>  <span class="c1"># , cmap=&quot;binary&quot;)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">for</span> <span class="n">dr</span> <span class="ow">in</span> <span class="n">drifters</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="c1"># Tracks that exit the northern Strait (i.e. with end point west of 125.19◦W, north of 50.0◦N) should be GREEN</span>
+
+<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 </div>
