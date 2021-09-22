@@ -39,13 +39,9 @@ lats = np.arange(10,16)
 L2 = np.array([lats[2], lats[4]])
 ```
 
-your answer here
-
 ```{code-cell} ipython3
 L3 = np.array([lats[-1], lats[0]])
 ```
-
-your answer here
 
 ```{code-cell} ipython3
 L4 = lats[lats > 13]
@@ -74,10 +70,6 @@ newlats = lats.reshape([2,3])
 ```
 
 **B) What are all the possible shapes we can reassign to `lats`? Why do some work and others not**
-
-+++
-
-your answer here
 
 +++
 
