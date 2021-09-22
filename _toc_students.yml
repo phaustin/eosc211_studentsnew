@@ -16,7 +16,7 @@ parts:
     chapters:
       - file: wk03/data_structures.md
       - file: wk03/data_structures_ii.md
-      - file: exchange/e211/outbound/week3_lab/lab_wk3.ipynb
+      - file: wk03/week3_lab/lab_wk3.ipynb
   # - caption: Week 4 - Scientific Figures
   #   chapters:
   #     - file: wk04/making_plots.md
