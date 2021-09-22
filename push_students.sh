@@ -1,4 +1,4 @@
 #!/bin/bash -v
-git push -f students e211_live_main
+git push students e211_live_main
 
 
