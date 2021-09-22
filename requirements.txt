@@ -1,0 +1,2 @@
+git+https://github.com/phaustin/e211_lib.git
+git+https://github.com/eoas-ubc/paged_html_theme.git
