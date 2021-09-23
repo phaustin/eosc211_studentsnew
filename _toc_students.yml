@@ -17,6 +17,7 @@ parts:
       - file: wk03/data_structures.md
       - file: wk03/data_structures_ii.md
       - file: wk03/week3_lab/lab_wk3.ipynb
+      - file: wk03/week3_quiz.md
   # - caption: Week 4 - Scientific Figures
   #   chapters:
   #     - file: wk04/making_plots.md
