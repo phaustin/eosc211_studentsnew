@@ -1,15 +1,16 @@
-name: mainsite
+name: e211_students
 channels:
   - eoas_ubc
   - conda-forge
   - defaults
 dependencies:
   - git
+  - e211_lib
   - python=3.8
   - pip
   - pillow
   - bokeh
-  - nbgitpuller>1.0
+  - conda-lock
   - ghp-import
   - jupytext
   - jupyter-book
