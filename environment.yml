@@ -22,4 +22,5 @@ dependencies:
   - matplotlib
   - numpy
   - pandas
+  - arrow
 # conda-lock --file environment.yml -p linux-64
