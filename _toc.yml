@@ -11,7 +11,7 @@ parts:
     chapters:
       - file: wk02/data_types.md
       - file: wk02/some_review_plus_built_in_functions_arrays_preview.md
-      - file: week2_lab/lab_wk2.ipynb
+      - file: wk02/lab_wk2.md
   - caption: Week 3 - Data Structures
     chapters:
       - file: wk03/data_structures.md

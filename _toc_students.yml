@@ -11,17 +11,18 @@ parts:
     chapters:
       - file: wk02/data_types.md
       - file: wk02/some_review_plus_built_in_functions_arrays_preview.md
-      - file: week2_lab/lab_wk2.ipynb
+      - file: week2_lab/lab_wk2.md
   - caption: Week 3 - Data Structures
     chapters:
       - file: wk03/data_structures.md
       - file: wk03/data_structures_ii.md
-      - file: wk03/week3_lab/lab_wk3.ipynb
+      - file: outbound/week3_lab/lab_wk3.md
       - file: wk03/week3_quiz.md
-  # - caption: Week 4 - Scientific Figures
-  #   chapters:
-  #     - file: wk04/making_plots.md
-  #     - file: wk04/lab_wk4/lab_wk4.md
+  - caption: Week 4 - Scientific Figures
+    chapters:
+      - file: wk04/making_plots.md
+      - file: wk04/lab_wk4/lab_wk4.md
+      - file: outbound/week4_lab/lab_wk4.md
   # - caption: Week 5 - Computer Logic
   #   chapters:
   #     - file: wk05/logic.md
