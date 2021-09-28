@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Making Plots
+# Making Plots Worksheet
 
 ## EOSC 211
 
